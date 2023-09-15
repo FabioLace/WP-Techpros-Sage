@@ -1,0 +1,39 @@
+.contacts-social{
+    background-color: $secondary-color;
+    padding: 10px;
+
+
+    a,a:hover{
+        color: white;
+        text-decoration: none;
+    }
+
+    i{ margin-right: 1px; }
+
+    .contacts, .social{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .contacts{
+        margin: {
+            left: 1em;
+            right: auto;
+        }
+        
+        div{
+            margin: {
+                left: 1em;
+                right: 1em;
+            }
+        }
+    }
+
+    .social{
+        margin-right: 1em;
+    
+
+        a{ margin-left: 1em; }
+    }
+}
