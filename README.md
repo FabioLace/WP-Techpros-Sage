@@ -1,54 +1,42 @@
-<p align="center">
-  <a href="https://roots.io/sage/">
-    <img alt="Sage" src="https://cdn.roots.io/app/uploads/logo-sage.svg" height="100">
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://packagist.org/packages/roots/sage">
-    <img alt="Packagist Installs" src="https://img.shields.io/packagist/dt/roots/sage?label=projects%20created&colorB=2b3072&colorA=525ddc&style=flat-square">
-  </a>
-
-  <a href="https://github.com/roots/sage/actions/workflows/main.yml">
-    <img alt="Build Status" src="https://img.shields.io/github/actions/workflow/status/roots/sage/main.yml?branch=main&logo=github&label=CI&style=flat-square">
-  </a>
-
-  <a href="https://twitter.com/rootswp">
-    <img alt="Follow Roots" src="https://img.shields.io/badge/follow%20@rootswp-1da1f2?logo=twitter&logoColor=ffffff&message=&style=flat-square">
-  </a>
-</p>
-
-<p align="center">Advanced WordPress starter theme with Tailwind CSS and Laravel Blade</p>
-
-<p align="center">
-  <a href="https://roots.io/sage/">Website</a> &nbsp;&nbsp; <a href="https://roots.io/sage/docs/installation/">Documentation</a> &nbsp;&nbsp; <a href="https://github.com/roots/sage/releases">Releases</a> &nbsp;&nbsp; <a href="https://discourse.roots.io/">Community</a>
-</p>
-
-## Sponsors
-
-Sage is an open source project and completely free to use. If you've benefited from our projects and would like to support our future endeavors, please consider [sponsoring Roots](https://github.com/sponsors/roots).
-
 <div align="center">
-<a href="https://k-m.com/"><img src="https://cdn.roots.io/app/uploads/km-digital.svg" alt="KM Digital" width="120" height="90"></a> <a href="https://carrot.com/"><img src="https://cdn.roots.io/app/uploads/carrot.svg" alt="Carrot" width="120" height="90"></a> <a href="https://wordpress.com/"><img src="https://cdn.roots.io/app/uploads/wordpress.svg" alt="WordPress.com" width="120" height="90"></a> <a href="https://pantheon.io/"><img src="https://cdn.roots.io/app/uploads/pantheon.svg" alt="Pantheon" width="120" height="90"></a> <a href="https://worksitesafety.ca/careers/"><img src="https://cdn.roots.io/app/uploads/worksite-safety.svg" alt="Worksite Safety" width="120" height="90"></a> <a href="https://www.copiadigital.com/"><img src="https://cdn.roots.io/app/uploads/copia-digital.svg" alt="Copia Digital" width="120" height="90"></a>  <a href="https://generodigital.com/"><img src="https://cdn.roots.io/app/uploads/genero.svg" alt="Genero" width="120" height="90"></a> <a href="https://40q.agency/"><img src="https://cdn.roots.io/app/uploads/40q.svg" alt="40Q" width="120" height="90"></a>
+    <p>
+        <img src="#">
+    </p>
+    <p>
+        <img src="https://img.shields.io/badge/License-GPLv3-red?style=for-the-badge">
+        <img src="https://img.shields.io/badge/wordpress-grey?style=for-the-badge&logo=wordpress">
+    </p>
 </div>
+  
+Tema per Wordpress realizzato con Sage 10 e basato su <a href="https://wp.ditsolution.net/techpros/">quello sviluppato da Template Monster</a>.
 
-## Overview
+# Librerie e plugin esterni
+* <a href="https://animate.style/">Animate.css 4.1.1</a>
+* <a href="https://getbootstrap.com/">Bootstrap 4.5.2</a> 
+* <a href="https://fontawesome.com/">Fontawesome 6.4.2</a>
 
-Sage is a WordPress starter theme with block editor support.
+# Licenza
+Fai quello che cazzo ti pare con 'sto tema, basta che non lo rivendi né lo spacci per tuo al 100%.
 
-- Harness the power of [Laravel](https://laravel.com) and its available packages thanks to [Acorn](https://github.com/roots/acorn)
-- Clean, efficient theme templating utilizing [Laravel Blade](https://laravel.com/docs/master/blade)
-- Modern frontend development workflow powered by [Bud](https://bud.js.org/)
-- Out of the box support for [Tailwind CSS](https://tailwindcss.com/)
+# Perché Sage 10?
+Puoi fare le stesse cose di Laravel, solo su Wordpress.
 
-## Getting Started
+# Deploy
+* Scarica la repo nella tua cartella "themes"
+* Apri il terminale nella cartella del tema ed esegui 'sti comandi:
+```sh
+composer install
+npm install
+npm run build
+```
+* Al posto di npm puoi anche usare yarn, ma fai come ti pare
+* Da CMS attivi il tema
 
-See the [Sage installation documentation](https://roots.io/sage/docs/installation/).
+# Cose da sapere
+Non è completamente integrato con il CMS, perché la maggior parte delle cose è scritta direttamente su file HTML e le immagini sono presenti negli assets. SE VUOI lascerò alcune righe commentate che potranno essere utili nel sostituire i testi/immagini con quello che vuoi tu, ma dovrai poi installare il famoso plugin <a href="https://wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields</a> nel tuo progetto principale.
 
-## Stay Connected
-
-- Join us on Discord by [sponsoring us on GitHub](https://github.com/sponsors/roots)
-- Participate on [Roots Discourse](https://discourse.roots.io/)
-- Follow [@rootswp on Twitter](https://twitter.com/rootswp)
-- Read the [Roots Blog](https://roots.io/blog/)
-- Subscribe to the [Roots Newsletter](https://roots.io/newsletter/)
+# Cose FONDAMENTALI da sapere
+* Realizzato su Ubuntu 22.04.3 LTS (MacOS === 💩)
+* Testato sui motori Quantum e Blink, non su WebKit perché è da gay e Safari fa cagare
+* Testato su Wordpress 6.2.2 e 6.3
+* È responsive fino alla vastità del cazzo che te ne frega
