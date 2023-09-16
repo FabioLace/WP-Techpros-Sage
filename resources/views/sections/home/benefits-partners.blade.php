@@ -1,6 +1,6 @@
 <div class="benefits-partners">
     <div class="benefits">
-        <img src="@asset('/assets/images/why-choose.png')">
+        <img src="@asset('images/why-choose.png')">
         <div class="text">
             <div class="h5-line">
                 <h5>Our benefits</h5>

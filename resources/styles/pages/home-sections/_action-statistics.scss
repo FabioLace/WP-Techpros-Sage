@@ -1,6 +1,6 @@
 @media screen and (min-width: 319px){
     .action-statistics{
-        background-color: var(--secondary-color);
+        background-color: $secondary-color;
         padding-top: 30px;
     }
 
@@ -28,7 +28,7 @@
 
     .call-to-action button{
         background-color: rgb(255, 255, 255);
-        color: var(--primary-color);
+        color: $primary-color;
         padding: 12px 28px;
         border-radius: 5px;
         text-transform: none;
@@ -53,7 +53,7 @@
         font-size: larger;
         margin-right: 10px;
         border-radius: 50%;
-        background-color: var(--secondary-color);
+        background-color: $secondary-color;
         color: white;
     }
 
@@ -71,15 +71,15 @@
     }
 
     .stat-purple{
-        background-color: var(--secondary-color);
+        background-color: $secondary-color;
     }
 
     .stat-purple .icon{
-        background-color: var(--primary-color);
+        background-color: $primary-color;
     }
 
     .stat-blue{
-        background-color: var(--primary-color);
+        background-color: $primary-color;
     }
 
     .stat-white{
@@ -121,7 +121,7 @@
     }
 
     .call-to-action button:hover{
-        background-color: var(--primary-color);
+        background-color: $primary-color;
         color: white;
     }
 

@@ -1,6 +1,6 @@
 @media screen and (min-width: 319px){
     .hero{
-        background: url('../images/slider1.jpg') 50% 0 / auto scroll no-repeat;
+        background: url('../../../images/slider1.jpg') 50% 0 / auto scroll no-repeat;
         height: auto;
         color: white;
 
@@ -92,21 +92,21 @@
 
                 &-white{
                     background-color: white;
-                    color: var(--ux-black);
-                    border-bottom: 10px solid var(--secondary-color);
+                    color: $ux-black;
+                    border-bottom: 10px solid $secondary-color;
                     
                     .icon-h2{
                         i{
-                            color: var(--secondary-color);
+                            color: $secondary-color;
                             transition: 0.4s;
                         }
                     }
                 }
 
                 &-purple{
-                    background-color: var(--secondary-color);
+                    background-color: $secondary-color;
                     color: white;
-                    border-bottom: 10px solid var(--primary-color);
+                    border-bottom: 10px solid $primary-color;
                 }
             }
         }
@@ -131,7 +131,7 @@
 
                 &.it-service{
                     display: block;
-                    background: var(--secondary-color);
+                    background: $secondary-color;
                 }
             }
         }
@@ -140,7 +140,7 @@
 
 @media screen and (min-width: 1023px) {
     .hero{
-        background: url('../images/slider1.jpg') center center / cover scroll no-repeat;
+        background: url('../../../images/slider1.jpg') center center / cover scroll no-repeat;
 
         &-content{
             align-items: unset;
@@ -173,7 +173,7 @@
                     margin-left: unset;
 
                     &.it-service:hover{
-                        background: var(--primary-color);
+                        background: $primary-color;
                     }
                 }
             }
@@ -196,7 +196,7 @@
                 }
 
                 &-white:hover{
-                    background-color: var(--primary-color);
+                    background-color: $primary-color;
                     color: white;
 
                     #purple-icon{
@@ -205,8 +205,8 @@
                 }
 
                 &-purple:hover{
-                    background-color: var(--primary-color);
-                    border-bottom: 10px solid var(--secondary-color);
+                    background-color: $primary-color;
+                    border-bottom: 10px solid $secondary-color;
                 }
             }
         }

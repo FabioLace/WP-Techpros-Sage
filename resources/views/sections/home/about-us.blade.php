@@ -1,12 +1,12 @@
 <div class="about-us">
     <div class="content">
-        <img class="collage" src="<?= esc_url( get_template_directory_uri() . '/assets/images/about1.png' ); ?>">
+        <img class="collage" src="@asset('images/about1.png' )">
         <div class="text">
             <div class="h5-line">
                 <h5>About Us</h5>
                 <div class="line"></div>
             </div>
-            <h2>We are Techpros, <br> Established <span style="color: var(--primary-color);">Since 1999</span></h2>
+            <h2>We are Techpros, <br> Established <span style="color: $primary-color;">Since 1999</span></h2>
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.

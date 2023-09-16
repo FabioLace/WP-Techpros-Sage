@@ -1,6 +1,4 @@
 <header class="the-header">
-    @php
-        get_template_part( 'template-parts/header/contacts-social' );
-        get_template_part( 'template-parts/header/navbar' );
-    @endphp
+    @include('sections.header.contacts-social')
+    @include('sections.header.navbar')
 </header>
