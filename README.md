@@ -23,13 +23,20 @@ Puoi fare le stesse cose di Laravel, solo su Wordpress.
 
 # Deploy
 * Scarica la repo nella tua cartella "themes"
-* Apri il terminale nella cartella del tema ed esegui 'sti comandi:
+* Apri il terminale nella cartella del tema e lancia 'sti comandi:
 ```sh
 composer install
+yarn
+yarn add @roots/bud-sass --dev
+yarn build
+```
+
+* Se non vuoi usare yarn (consigliato dalla documentazione di Sage) e vuoi fare come cazzo ti pare, lancia:
+```sh
 npm install
 npm run build
 ```
-* Al posto di npm puoi anche usare yarn, ma fai come ti pare
+
 * Da CMS attivi il tema
 
 # Cose da sapere
