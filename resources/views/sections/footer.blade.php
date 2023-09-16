@@ -26,7 +26,7 @@
     <div class="real-footer">
         <div class="real-footer-container">
             <div class="brand-identity">
-                <img src="{{ esc_url( get_template_directory_uri() . '/assets/images/logo-transparent.png' ); }}">
+                <img src="@asset('/images/logo-transparent.png')">
                 <div>
                     We are experienced professionals who understand that It services is
                     changing, and are true partners who care about your future business success.
