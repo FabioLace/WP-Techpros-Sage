@@ -1,3 +1,7 @@
-@import "../pages/home-components/hero";
-@import "../pages/home-components/about-us";
-@import "../pages/home-components/our-services";
+@import "./home-sections/hero";
+@import "./home-sections/about-us";
+@import "./home-sections/our-services";
+@import "./home-sections/action-statistics";
+@import "./home-sections/process";
+@import "./home-sections/benefits-partners";
+@import "./home-sections/testimonials";

@@ -1,0 +1,106 @@
+@media screen and (min-width: 319px) {
+    .benefits-partners{
+        margin-top: 92px;
+        margin-bottom: 92px;
+    }
+
+    .benefits{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .benefits>img{
+        width: 50%;
+        height: auto;
+        margin-right: 50px;
+    }
+
+    .benefits h3{
+        font-size: 20px;
+        margin: 13px 0px 3px;
+    }
+
+    .benefits .text{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .benefits p{
+        margin-top: 20px;
+        font-weight: 400;
+    }
+
+    .benefits .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        font-size: larger;
+        margin-right: 20px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 3px 2px 18px 0px rgb(0 0 0 / 10%);
+    }
+
+    .benefits i{
+        margin-right: unset;
+        transition: 0.3s;
+    }
+    
+    .benefits .paragraph h2{
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+    .swiper{
+        width: 100%;
+        padding: 30px;
+    }
+
+    .swiper-wrapper .swiper-slide{
+        display: flex;
+        flex-direction: row;
+        width: 187px;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: 30px 20px 35px;
+        filter: contrast(0);
+        transition: 0.3s;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .benefits{
+        flex-direction: row;
+    }
+
+    .benefits>img{
+        width: 30%;
+    }
+
+    .benefits .line{
+        margin-left: 30px;
+    }
+
+    .benefits .icon {
+        transition: 0.3s;
+    }
+
+    .benefits .icon:hover{
+        background-color: var(--secondary-color);
+    }
+
+    .benefits .icon:hover i{
+        color: white;
+    }
+
+    .swiper-slide:hover {
+        filter: contrast(1);
+        opacity: 1;
+        cursor: pointer;
+        box-shadow: 11px 10px 28px 0px rgb(0 0 0 / 10%);
+    }
+}

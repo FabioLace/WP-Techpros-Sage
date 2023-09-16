@@ -1,0 +1,201 @@
+@media screen and (min-width: 319px){
+    .our-services{
+        background-color: var(--secondary-color);
+        color: white;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .services-content{
+        padding: 100px 0 50px 0;
+    }
+
+    .text-button{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 50px;
+        margin-left: 50px;
+    }
+
+    .services-content .text-button>.text {
+        margin: unset;
+    }
+
+    .text-button .text h5{
+        font-size: 16px;
+        text-transform: uppercase;
+    }
+
+    .text-button .text h3{
+        font-weight: 700;
+        text-transform: capitalize;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .view-services{
+        width: fit-content;
+        height: fit-content;
+        border-radius: 5px;
+        text-transform: capitalize;
+        border: 5px solid transparent;
+        padding: 10px 15px;
+        margin-top: 5px;
+    }
+
+    .services-cards{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        margin: 80px;
+    }
+
+    .card{
+        background: none;
+        border: 2px solid var(--primary-color);
+        text-align: center;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card h2{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+
+    .icon-card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        color: var(--primary-color);
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin: 10px;
+    }
+
+    .icon-card i{
+        font-size: 40px;
+    }
+
+    .card a{
+        color: white;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .text-button{
+        flex-direction: row;
+        align-items: center;
+        margin-right: 50px;
+    }
+
+    .services-content .text-button>.text{
+        margin-right: auto;
+    }
+
+    .services-cards{
+        display: grid;
+        justify-content: center;
+        gap: unset;
+        margin: unset;
+        grid-template-columns: 45% 45%;
+        column-gap: 15px;
+        row-gap: 15px;
+        grid-template-rows: 50% 50%;
+    }  
+}
+
+@media screen and (min-width: 1023px) {
+    .services-content{
+        padding: 100px 121px 100px 121px;
+    }
+
+    .text-button{
+        margin-left: unset;
+        margin-right: unset;
+    }
+
+    .services-cards{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .view-services{
+        margin-top: unset;
+        margin-left: auto;
+        padding: 15px 20px;
+    }
+
+    .view-services:hover{
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+        background-color: var(--secondary-color);
+    }
+
+    .services-card{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .card {
+        margin: 10px;
+        transition: all 0.3s;
+    }
+
+    .icon-card{
+        margin: 30px;
+    }
+
+    .icon-card i{
+        font-size: 50px;
+    }
+
+    .icon-card .circle{
+        position: absolute;
+        z-index: 0;
+        display: none;
+        width: 120px;
+        height: 120px;
+        border: 2px solid white;
+        border-radius: 50%;
+        transition: 0.3s;
+        animation: rotation 2s linear infinite;
+        clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%,0 0);
+    }
+
+    .activated, .always-activated{
+        background-color: var(--primary-color);
+    }
+
+    .activated, .always-activated:hover{
+        transform: translatey(-5px);
+    }
+
+    .always-activated .circle{
+        display: block;
+    }
+
+    .circle::before{
+        position: absolute;
+        content: '';
+        background: #fff;
+        width: 8px;
+        height: 8px;
+        left: 15px;
+        bottom: 9px;
+        border-radius: 50%;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg); /* PERÒ DEVE PARTIRE DA DOVE SI È FERMATO 🤔 */
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+}

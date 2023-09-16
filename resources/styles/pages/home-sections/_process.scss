@@ -1,0 +1,164 @@
+@media screen and (min-width: 319px){
+    .process{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .process .text{
+        margin: unset;
+        margin-bottom: 50px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .process h2{
+        font-size: 30px;
+    }
+
+    .process .h5-line{
+        margin-bottom: 13px;
+    }
+
+    .process .h5-line h5{
+        font-size: 16px;
+    }
+
+    .step-grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .step{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .icon-counter{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        position: relative;
+    }
+
+    .icon-counter i{
+        color: rgb(255, 255, 255);
+        font-size: 50px;
+    }
+
+    .counter{
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        color: var(--primary-color);
+        background-color: rgb(255, 255, 255);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        top: 0px;
+        right: -15px;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75);
+    }
+
+    .dot-line{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .dot, .vertical-line{
+        border: 1px solid rgb(128, 128, 128);
+    }
+
+    .dot{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-color: none;
+        margin-bottom: 2px;
+    }
+
+    .vertical-line{
+        width: 2px;
+        height: 40px;
+    }
+
+    .step-text{
+        width: 200px;
+    }
+
+    .step-text h2{
+        font-weight: 700;
+        font-size: 16px;
+    }
+
+    .direction-sign{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 767px) {
+    .step-grid{
+        display: grid;
+        align-items: unset;
+        grid-template-columns: auto auto auto auto auto;
+    }
+
+    .step{
+        margin-bottom: unset;
+    }
+
+    .icon-counter{
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon-counter i{
+        font-size: 30px;
+    }
+
+    .counter{
+        width: 30px;
+        height: 30px;
+    }
+
+    .direction-sign{
+        display: block;
+        width: 50px;
+        height: 10px;
+        margin-left: 10px;
+        margin-right: 5px;
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .icon-counter{
+        width: 120px;
+        height: 120px;
+    }
+
+    .icon-counter i{
+        font-size: 50px;
+    }
+
+    .counter{
+        width: 50px;
+        height: 50px;
+    }
+
+    .direction-sign{
+        width: 200px;
+        height: 40px;
+    } 
+}

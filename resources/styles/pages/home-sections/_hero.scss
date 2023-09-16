@@ -1,0 +1,226 @@
+@media screen and (min-width: 319px){
+    .hero{
+        background: url('../images/slider1.jpg') 50% 0 / auto scroll no-repeat;
+        height: auto;
+        color: white;
+
+        &-content{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 15px 0 15px;
+            margin: 0 auto 0 auto;
+            
+            .text{
+                margin: unset;
+                margin-top: 60px;
+                width: auto;
+                text-align: center;
+                
+                h4{
+                    text-transform: capitalize;
+                    font: 600 16px "Nunito", sans-serif;
+                    margin-top: 55px;
+                    margin-bottom: 24px;
+                }
+
+                h1{
+                    font-size: 21px;
+                    font-weight: 900;
+                    margin-bottom: 21px;
+                    line-height: 35px;
+                    text-transform: uppercase;
+                }
+
+                p{
+                    margin: 20px 0px 40px 0px;
+                    width: 100%;
+                    font-size: 18px;
+                }
+            }
+
+            .hero-buttons{
+                button{
+                    margin-bottom: 60px;
+
+                    &.it-service{
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .main-services{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 50px auto 0px auto;
+            box-shadow: 0px 20px 5px -5px rgba(0,0,0,0.3);
+    
+            .service{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: fit-content;
+                transition: 0.4s;
+
+                &-content{
+                    padding: 50px;
+
+                        .icon-h2{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                        
+                            h2{
+                                font-weight: 700;
+                                font-size: 20px;
+                            }
+
+                            i{
+                                margin-bottom: 10px;
+                                margin-right: 10px;
+                                font-size: 30px;
+                            }
+                        }
+
+                    .service-text{
+                        font-size: 16px;
+                    }
+                }
+
+                &-white{
+                    background-color: white;
+                    color: var(--ux-black);
+                    border-bottom: 10px solid var(--secondary-color);
+                    
+                    .icon-h2{
+                        i{
+                            color: var(--secondary-color);
+                            transition: 0.4s;
+                        }
+                    }
+                }
+
+                &-purple{
+                    background-color: var(--secondary-color);
+                    color: white;
+                    border-bottom: 10px solid var(--primary-color);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px){
+    .hero{
+        margin-top: 0px;
+
+        &-content{
+            .text{
+                p{
+                    width: 55%;
+                }
+            }
+
+            .hero-buttons{
+                display: flex;
+                flex-direction: row;
+                gap: 10px;
+
+                &.it-service{
+                    display: block;
+                    background: var(--secondary-color);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1023px) {
+    .hero{
+        background: url('../images/slider1.jpg') center center / cover scroll no-repeat;
+
+        &-content{
+            align-items: unset;
+            justify-content: left;
+            padding: 242px;
+            font-size: unset;
+
+            .text{
+                width: auto;
+                text-align: unset;
+
+                h4{
+                    font-size: 20px;
+                }
+
+                h1{
+                    font-size: 60px;
+                    line-height: 71px;
+                }
+
+                p{
+                    margin: unset;
+                    width: unset;
+                }
+            }
+
+            .hero-buttons{
+                button{
+                    margin: 10px;
+                    margin-left: unset;
+
+                    &.it-service:hover{
+                        background: var(--primary-color);
+                    }
+                }
+            }
+        }
+
+        .main-services{
+            flex-direction: row;
+            justify-content: center;
+            align-items: unset;
+            width: 100%;
+            box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);
+
+            .service{
+                width: 400px;
+                height: 250px;
+
+                &-content{
+                    padding: 20px;
+                    font-size: unset;
+                }
+
+                &-white:hover{
+                    background-color: var(--primary-color);
+                    color: white;
+
+                    #purple-icon{
+                        color: white;
+                    }
+                }
+
+                &-purple:hover{
+                    background-color: var(--primary-color);
+                    border-bottom: 10px solid var(--secondary-color);
+                }
+            }
+        }
+    }
+}
+    /* .service-1{
+        background-image: url("../images/flipbox1.jpg");
+        opacity: 0.5;
+    }
+
+    .service-2{
+        background-image: url("../images/flipbox2.jpg");
+    }
+
+    .service-3{
+        background-image: url("../images/flipbox3.jpg");
+    } */
