@@ -46,8 +46,23 @@
     align-items: center;
 }
 
+@mixin row-justify-center{
+    @include flex-row;
+    justify-content: center;
+}
+
+@mixin col-justify-center{
+    @include flex-col;
+    justify-content: center;
+}
+
 @mixin col-align-justify-center{
     @include col-align-center;
+    justify-content: center;
+}
+
+@mixin row-align-justify-center{
+    @include row-align-center;
     justify-content: center;
 }
 

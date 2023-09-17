@@ -41,7 +41,7 @@
             observer.observe(statisticsElement);
         });
     </script>
-    <div class="call-to-action">
+    <div class="cta">
         <h2>We Provide Worldwide IT Service For <br> Small & Mid-Sized Business</h2>
         <p>
             Nectar accumsan id nisi in ullamcorper. Nullam leo maximus vitae interdum non,
