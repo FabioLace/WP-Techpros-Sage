@@ -9,7 +9,7 @@
     <div class="testimonials-container">
         <div class="single-testimonial">
             <div class="portrait-container">
-                <img class="portrait" src="@asset('assets/images/testi4.jpg')">
+                <img class="portrait" src="@asset('images/testi4.jpg')">
                 <i class="fa-solid fa-quote-left"></i>
             </div>
             <p>

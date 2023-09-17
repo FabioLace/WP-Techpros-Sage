@@ -41,6 +41,7 @@
     </div>
     <div class="partners mt-5">
         <script>
+            /*DECOMMENTA SE NON FUNZIONA SWIPER DA APP.JS
             window.addEventListener('load', function () {
                 if(typeof Swiper !== 'undefined') {
                     console.log("SWIPER IS DEFINED");
@@ -60,7 +61,7 @@
                 } else {
                     console.log("SWIPER IS NOT DEFINED");
                 }
-            });
+            });*/
         </script>
         <div class="swiper">
             <div class="swiper-wrapper">
@@ -80,6 +81,6 @@
                 @endforeach
             </div>
             <div class="swiper-pagination"></div>
-        </div>            
+        </div>
     </div>
 </div>

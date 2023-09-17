@@ -1,59 +1,60 @@
 /* NON SERVE LA MEDIA QUERY */
 .testimonials-and-text{
     background: url("../../../images/testi1.jpg") center center/cover no-repeat;
-    padding: 85px 0px 116px 0px;
-}
+    padding: 85px 0px 116px;
 
-.testimonials-and-text .h5-line h5{
-    font-size: 16px;
-    letter-spacing: 0.2px;
-}
+    .text{
+        .h5-line{
+            h5{
+                font-size: 16px;
+                letter-spacing: 0.2px;
+            }
+        }
 
-.testimonials-and-text h3{
-    font-size: 36px;
-    font-weight: 700;
-    margin: 13px 0px 3px 0px; 
-}
+        h3{
+            font-size: 36px;
+            font-weight: 700;
+            margin: 13px 0px 3px; 
+        }
+    }
 
-.testimonials-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
+    .testimonials-container{
+        display: flex;
+        @include align-justify-center;
+        margin: 50px 0;
 
-.single-testimonial{
-    padding: 50px;
-    background-color: white;
-    width: 50%;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
-    position: relative;
-}
+        .single-testimonial{
+            padding: 50px;
+            background-color: #ffffff;
+            width: 50%;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+            position: relative;
 
-.portrait-container {
-    position: relative;
-    display: inline-block;
-}
 
-.portrait {
-    padding: 7px;
-    width: 115px;
-    border-radius: 50%;
-}
+            .portrait-container {
+                display: inline-block;
+                position: relative;
 
-.portrait-container i{
-    font-size: 18px;
-    position: absolute;
-    line-height: 50px;
-    bottom: 7px;
-    right: -16px;
-    background-color: #43baff;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    color: #fff;
-    border-radius: 50%;
-    z-index: 1;
+                .portrait {
+                    padding: 7px;
+                    width: 115px;
+                    border-radius: 50%;
+                }
+
+                i{
+                    @include make-circle(50px);
+                    font-size: 18px;
+                    position: absolute;
+                    line-height: 50px;
+                    bottom: 7px;
+                    right: -16px;
+                    background-color: $primary-color;
+                    text-align: center;
+                    color: #fff;
+                    z-index: 1;
+                }
+            }
+        }
+    }
 }
