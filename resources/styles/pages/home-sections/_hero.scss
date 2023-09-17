@@ -1,15 +1,14 @@
 @media screen and (min-width: 319px){
     .hero{
+        //background-image: url("../images/slider1.jpg") IN TEORIA;
         background: url('../../../images/slider1.jpg') 50% 0 / auto scroll no-repeat;
         height: auto;
         color: white;
 
         &-content{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0 15px 0 15px;
-            margin: 0 auto 0 auto;
+            @include col-align-center;
+            padding: 0 15px;
+            margin: 0 auto;
             
             .text{
                 margin: unset;
@@ -20,20 +19,21 @@
                 h4{
                     text-transform: capitalize;
                     font: 600 16px "Nunito", sans-serif;
-                    margin-top: 55px;
-                    margin-bottom: 24px;
+                    margin: 55px 0 24px;
                 }
 
                 h1{
-                    font-size: 21px;
-                    font-weight: 900;
+                    font: {
+                        size: 21px;
+                        weight: 900;
+                    }
                     margin-bottom: 21px;
                     line-height: 35px;
                     text-transform: uppercase;
                 }
 
                 p{
-                    margin: 20px 0px 40px 0px;
+                    margin: 20px 0px 40px;
                     width: 100%;
                     font-size: 18px;
                 }
@@ -51,11 +51,9 @@
         }
 
         .main-services{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            @include col-align-center;
             width: 100%;
-            margin: 50px auto 0px auto;
+            margin: 50px auto 0px;
             box-shadow: 0px 20px 5px -5px rgba(0,0,0,0.3);
     
             .service{
@@ -69,9 +67,7 @@
                     padding: 50px;
 
                         .icon-h2{
-                            display: flex;
-                            flex-direction: row;
-                            align-items: center;
+                            @include row-align-center;
                         
                             h2{
                                 font-weight: 700;
@@ -125,11 +121,10 @@
             }
 
             .hero-buttons{
-                display: flex;
-                flex-direction: row;
+                @include flex-row;
                 gap: 10px;
 
-                &.it-service{
+                button.it-service{
                     display: block;
                     background: $secondary-color;
                 }
@@ -140,6 +135,7 @@
 
 @media screen and (min-width: 1023px) {
     .hero{
+        //background-image: url("../images/slider1.jpg") IN TEORIA;
         background: url('../../../images/slider1.jpg') center center / cover scroll no-repeat;
 
         &-content{

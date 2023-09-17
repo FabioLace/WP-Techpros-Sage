@@ -73,7 +73,6 @@ function sage_register_styles(){
     }
     add_action('wp_enqueue_scripts', 'sage_register_styles'); 
 
-
 add_theme_support('sage');
 
 /**

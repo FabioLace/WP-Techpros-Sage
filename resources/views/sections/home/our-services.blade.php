@@ -32,7 +32,7 @@
                     }
                 });
             </script>
-
+            {{-- DA CICLARE CON PHP --}}
             <div class="card">
                 <h2>Cyber Security</h2>
                 <span class="icon-card">
