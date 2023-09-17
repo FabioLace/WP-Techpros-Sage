@@ -11,3 +11,13 @@
     display: flex;
     flex-direction: row;
 }
+
+@mixin row-align-center{
+    @include flex-row;
+    align-items: center;
+}
+
+@mixin col-align-center{
+    @include flex-column;
+    align-items: center;
+}

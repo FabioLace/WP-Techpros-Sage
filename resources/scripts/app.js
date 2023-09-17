@@ -1,4 +1,7 @@
 import domReady from '@roots/sage/client/dom-ready';
+import $ from 'jquery';
+import 'bootstrap';
+import Swiper from 'swiper';
 
 /**
  * Application entrypoint

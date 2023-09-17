@@ -1,39 +1,44 @@
-.contacts-social{
-    background-color: $secondary-color;
-    padding: 10px;
-
-
-    a,a:hover{
-        color: white;
-        text-decoration: none;
+@media screen and (min-width: 319px){
+    .contacts-social{
+        display: none;
     }
+}
 
-    i{ margin-right: 1px; }
-
-    .contacts, .social{
+@media screen and (min-width: 1023px){
+    .contacts-social{
         display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .contacts{
-        margin: {
-            left: 1em;
-            right: auto;
+        background-color: $secondary-color;
+        padding: 10px 4em;
+        color: white;
+            
+        a,a:hover{
+            color: white; //FORZATURA
+            text-decoration: none;
         }
-        
-        div{
-            margin: {
-                left: 1em;
-                right: 1em;
+
+        i{
+            margin-right: 1px;
+        }
+
+        .contacts, .social{
+            @include row-align-center;
+        }
+
+        .contacts{
+            margin-left: 1em;
+            margin-right: auto;
+
+            div{
+                margin: 0 1em;
             }
         }
-    }
 
-    .social{
-        margin-right: 1em;
-    
+        .social{
+            margin-right: 1em;
 
-        a{ margin-left: 1em; }
+            a{
+                margin-left: 1em;
+            }
+        }
     }
 }

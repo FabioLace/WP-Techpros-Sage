@@ -68,6 +68,8 @@ function sage_register_styles(){
         $version = wp_get_theme()->get( 'Version' );
         wp_enqueue_style( 'sage-style', get_template_directory_uri(). '/style.scss', array('sage-bootstrap'), $version, 'all');
         wp_enqueue_style('sage-bootstrap',"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css",array(),'4.5.2','all');
+        wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', array(), '6.4.2', 'all');
+        wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1', 'all');
     }
     add_action('wp_enqueue_scripts', 'sage_register_styles'); 
 
