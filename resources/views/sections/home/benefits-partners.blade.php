@@ -44,19 +44,23 @@
             window.addEventListener('load', function () {
                 if(typeof Swiper !== 'undefined') {
                     console.log("SWIPER IS DEFINED");
-                    const swiper = new Swiper(".swiper", {
-                        slidesPerView: 3,
-                        centeredSlides: true,
-                        spaceBetween: 10,
-                        loop: true,
-                        styleMode: false,
-                        pagination: {
-                            el: '.swiper-pagination',
-                        },
-                        scrollbar: {
-                            el: '.swiper-scrollbar',
-                        },
-                    });
+                    try {
+                        const swiper = new Swiper(".swiper", {
+                            slidesPerView: 3,
+                            centeredSlides: true,
+                            spaceBetween: 10,
+                            loop: true,
+                            styleMode: false,
+                            pagination: {
+                                el: '.swiper-pagination',
+                            },
+                            scrollbar: {
+                                el: '.swiper-scrollbar',
+                            },
+                        });
+                    } catch (err) {
+                        console.log(err);
+                    }
                 } else {
                     console.log("SWIPER IS NOT DEFINED");
                 }

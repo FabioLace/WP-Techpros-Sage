@@ -19,6 +19,6 @@
     @endphp
 
     @foreach($sections as $section)
-        @include('sections.home.'.$section);
+        @include('sections.home.'.$section)
     @endforeach
 @endsection

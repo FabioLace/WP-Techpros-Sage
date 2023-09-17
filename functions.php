@@ -71,7 +71,7 @@ function sage_register_styles(){
     wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1', 'all');
 }
 
-add_action('wp_enqueue_scripts', 'sage_register_styles'); 
+add_action('wp_enqueue_scripts', 'sage_register_styles');
 
 add_theme_support('sage');
 
