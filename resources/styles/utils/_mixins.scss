@@ -1,7 +1,17 @@
 //MIXIN FUNCTIONS
-@mixin mx-square($size){ //Da gli stessi valori a width e height
+@mixin make-square($size){      //Da gli stessi valori a width e height
     width: $size;
     height: $size;
+}
+
+@mixin make-circle($size){      //Crea un cerchio
+    @include make-square($size);
+    border-radius: 50%;
+}
+
+@mixin set-mx($margin-x){       //Se non è possibile usare la shorthand di margin, dà gli stessi valori a margin-left e right
+    margin-left: $margin-x;
+    margin-right: $margin-x;
 }
 
 // FLEXES

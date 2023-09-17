@@ -1,7 +1,7 @@
 @media screen and (min-width: 319px){
     .our-services{
         background-color: $secondary-color;
-        color: white;
+        color: #ffffff;
         font-family: 'Montserrat', sans-serif;
 
         .services-content{
@@ -29,8 +29,7 @@
                 }
             
                 button.view-services{
-                    width: fit-content;
-                    height: fit-content;
+                    @include make-square(fit-content);
                     border-radius: 5px;
                     text-transform: capitalize;
                     border: 5px solid transparent;
@@ -45,12 +44,11 @@
                 margin: 80px;
 
                 .card{
+                    @include align-justify-center;
                     background: none;
                     border: 2px solid $primary-color;
                     text-align: center;
                     padding: 10px;
-                    justify-content: center;
-                    align-items: center;
 
                     h2{
                         margin-top: 10px;
@@ -58,14 +56,11 @@
                     }
 
                     .icon-card{
+                        @include align-justify-center;
+                        @include make-circle(100px);
                         display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        background-color: white;
+                        background-color: #ffffff;
                         color: $primary-color;
-                        width: 100px;
-                        height: 100px;
-                        border-radius: 50%;
                         margin: 10px;
 
                         i{
@@ -74,7 +69,7 @@
                     }
 
                     a{
-                        color: white;
+                        color: #ffffff;
                         margin: 20px 0;
                     }
                 }
@@ -84,102 +79,100 @@
 }
 
 @media screen and (min-width: 767px) {
-    .services-content{
+    .our-services{
+        .services-content{
+            .text-button{
+                flex-direction: row;
+                align-items: center;
+                margin-right: 50px;
 
-        .text-button{
-            flex-direction: row;
-            align-items: center;
-            margin-right: 50px;
-
-            .text{
-                margin-right: auto;
+                .text{
+                    margin-right: auto;
+                }
             }
-        }
-    
-        .services-cards{
-            display: grid;
-            justify-content: center;
-            gap: unset;
-            margin: unset;
-            grid-template-columns: 45% 45%;
-            column-gap: 15px;
-            row-gap: 15px;
-            grid-template-rows: 50% 50%;
+        
+            .services-cards{
+                display: grid;
+                justify-content: center;
+                gap: unset;
+                margin: unset;
+                grid-template-columns: 45% 45%;
+                column-gap: 15px;
+                row-gap: 15px;
+                grid-template-rows: 50% 50%;
+            }
         }
     }
 }
 
 @media screen and (min-width: 1023px) {
-    .services-content{
-        padding: 100px 121px;
+    .our-services{
+        .services-content{
+            padding: 100px 121px;
 
-        .text-button{
-            margin-left: unset;
-            margin-right: unset;
+            .text-button{
+                @include set-mx(unset);
 
-            .view-services{
-                margin-top: unset;
-                margin-left: auto;
-                padding: 15px 20px;
+                .view-services{
+                    margin-top: unset;
+                    margin-left: auto;
+                    padding: 15px 20px;
 
-                &:hover{
-                    color: $primary-color;
-                    border-color: $primary-color;
-                    background-color: $secondary-color;
+                    &:hover{
+                        color: $primary-color;
+                        border-color: $primary-color;
+                        background-color: $secondary-color;
+                    }
                 }
             }
-        }
 
-        .services-cards{
-            @include flex-row;
-    
-            .card {
-                margin: 10px;
-                transition: all 0.3s;
+            .services-cards{
+                @include flex-row;
+        
+                .card {
+                    margin: 10px;
+                    transition: all 0.3s;
 
-                .icon-card{
-                    margin: 30px;
+                    .icon-card{
+                        margin: 30px;
 
-                    i{
-                        font-size: 50px;
-                    }
+                        i{
+                            font-size: 50px;
+                        }
 
-                    .circle{
-                        position: absolute;
-                        z-index: 0;
-                        display: none;
-                        width: 120px;
-                        height: 120px;
-                        border: 2px solid white;
-                        border-radius: 50%;
-                        transition: 0.3s;
-                        animation: rotation 2s linear infinite;
-                        clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%,0 0);
-                    }
-                }
-
-                &.activated, &.always-activated{
-                    background-color: $primary-color;
-                }
-
-                &.activated, &.always-activated:hover{
-                    transform: translatey(-5px);
-                }
-
-                &.always-activated{
-
-                    .circle{
-                        display: block;
-
-                        &::before{
+                        .circle{
+                            @include make-circle(120px);
                             position: absolute;
-                            content: '';
-                            background: #fff;
-                            width: 8px;
-                            height: 8px;
-                            left: 15px;
-                            bottom: 9px;
-                            border-radius: 50%;
+                            z-index: 0;
+                            display: none;
+                            border: 2px solid #ffffff;
+                            transition: 0.3s;
+                            animation: rotation 2s linear infinite;
+                            clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%,0 0);
+                        }
+                    }
+
+                    &.activated, &.always-activated{
+                        background-color: $primary-color;
+                    }
+
+                    &.activated, &.always-activated:hover{
+                        transform: translatey(-5px);
+                    }
+
+                    &.activated, &.always-activated{
+
+                        .circle{
+                            display: block;
+
+                            &::before{
+                                @include make-circle(8px);
+                                position: absolute;
+                                content: '';
+                                background: #ffffff;
+                                left: 15px;
+                                bottom: 9px;
+                            }
                         }
                     }
                 }
