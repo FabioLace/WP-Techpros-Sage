@@ -1,3 +1,10 @@
+//MIXIN FUNCTIONS
+@mixin mx-square($size){ //Da gli stessi valori a width e height
+    width: $size;
+    height: $size;
+}
+
+// FLEXES
 @mixin flex-column{
     display: flex;
     flex-direction: column;
@@ -12,6 +19,13 @@
     flex-direction: row;
 }
 
+//ALIGN JUSTIFY COMBOS
+@mixin align-justify-center{
+    align-items: center;
+    justify-content: center;
+}
+
+//FLEX COMBOS
 @mixin row-align-center{
     @include flex-row;
     align-items: center;
@@ -21,3 +35,9 @@
     @include flex-column;
     align-items: center;
 }
+
+@mixin col-align-justify-center{
+    @include col-align-center;
+    justify-content: center;
+}
+
