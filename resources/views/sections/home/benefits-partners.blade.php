@@ -64,19 +64,20 @@
         </script>
         <div class="swiper">
             <div class="swiper-wrapper">
-                <?php
-                    $image_files = array('brand1.png', 'brand2.png', 'brand3.png', 'brand4.png', 'brand5.png', 'brand6.png');
+                @php
+                    $image_files = ['brand1.png', 'brand2.png', 'brand3.png', 'brand4.png', 'brand5.png', 'brand6.png'];
                     $template_directory_uri = esc_url(get_template_directory_uri());
+                @endphp
 
-                    foreach ($image_files as $image_file) {
-                        $image_url = $template_directory_uri . '/assets/images/' . $image_file;
-                ?>
-                <div class="swiper-slide">
-                    <img src="{{ $image_url }}" >
-                </div>
-                <?php
-                    }
-                ?>
+                @foreach ($image_files as $image_file)
+                    @php
+                        $image_url = $template_directory_uri . '/resources/images/' . $image_file;
+                    @endphp
+
+                    <div class="swiper-slide">
+                        <img src="{{ $image_url }}" alt="{{ $image_file }}">
+                    </div>
+                @endforeach
             </div>
             <div class="swiper-pagination"></div>
         </div>            
