@@ -8,6 +8,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600,800,900" >
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:600,800,900" >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     </head>
 
     <body <?php body_class(); ?>>

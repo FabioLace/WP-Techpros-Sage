@@ -11,7 +11,7 @@
     </p>
 </div>
   
-Tema per Wordpress realizzato con Sage 10 e basato su <a href="https://wp.ditsolution.net/techpros/">quello sviluppato da Template Monster</a>. Perché Sage 10? Puoi gestire il tuo tema come se fosse un app di Laravel: gestisci i pacchetti e le dipendenze con composer e npm, inoltre puoi usare le Blade per realizzare le tue viste.
+Tema per Wordpress realizzato con Sage 10 e basato su <a href="https://wp.ditsolution.net/techpros/">quello sviluppato da Template Monster</a>. Perché Sage 10? Puoi gestire il tuo tema come se fosse un app di Laravel: gestisci i pacchetti e le dipendenze con composer e npm, inoltre puoi usare le Blade per realizzare le tue viste. Se ti fa schifo tutto questo, c'è sempre la versione classica con puro CSS e PHP che puoi <a href="https://github.com/Fabiolx26/techpros-theme">trovare qui</a>.
 
 # Informazioni
 * PHP ^8.0
