@@ -3,7 +3,7 @@
         //background-image: url("../images/slider1.jpg") IN TEORIA;
         background: url('../../../images/slider1.jpg') 50% 0 / auto scroll no-repeat;
         height: auto;
-        color: white;
+        color: #ffffff;
 
         &-content{
             @include col-align-center;
@@ -87,7 +87,7 @@
                 }
 
                 &-white{
-                    background-color: white;
+                    background-color: #ffffff;
                     color: $ux-black;
                     border-bottom: 10px solid $secondary-color;
                     
@@ -101,7 +101,7 @@
 
                 &-purple{
                     background-color: $secondary-color;
-                    color: white;
+                    color: #ffffff;
                     border-bottom: 10px solid $primary-color;
                 }
             }
@@ -193,10 +193,10 @@
 
                 &-white:hover{
                     background-color: $primary-color;
-                    color: white;
+                    color: #ffffff;
 
                     #purple-icon{
-                        color: white;
+                        color: #ffffff;
                     }
                 }
 
