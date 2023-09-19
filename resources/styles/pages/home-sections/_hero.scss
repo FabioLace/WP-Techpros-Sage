@@ -1,7 +1,7 @@
 @media screen and (min-width: 319px){
     .hero{
         //background-image: url("../images/slider1.jpg") IN TEORIA;
-        background: url('../../../images/slider1.jpg') 50% 0 / auto scroll no-repeat;
+        background: url('./../../../images/slider1.jpg') 50% 0 / auto scroll no-repeat;
         height: auto;
         color: #ffffff;
 
@@ -136,7 +136,7 @@
 @media screen and (min-width: 1023px) {
     .hero{
         //background-image: url("../images/slider1.jpg") IN TEORIA;
-        background: url('../../../images/slider1.jpg') center center / cover scroll no-repeat;
+        background: url('./../../../images/slider1.jpg') center center / cover scroll no-repeat;
 
         &-content{
             align-items: unset;
