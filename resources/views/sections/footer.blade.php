@@ -1,9 +1,9 @@
 <footer>
-    <div class="contacts-address-time">
+    <div class="footer-1">
         <div class="contacts-container">
             <div class="contacts-template">
                 <h5>Quick Contact</h5>
-                <div class="contacts-address-time-content">
+                <div class="contacts-content">
                     <div>+ (002) 0106-1245-741</div>
                     <div>info@cmssuperheroes.com</div>
                 </div>
@@ -23,8 +23,8 @@
             </div>
         </div>
     </div>
-    <div class="real-footer">
-        <div class="real-footer-container">
+    <div class="footer-2">
+        <div class="footer-2-container">
             <div class="brand-identity">
                 <img src="@asset('images/logo-transparent.png')">
                 <div>
