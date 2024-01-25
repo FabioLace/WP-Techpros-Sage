@@ -11,7 +11,7 @@
     </p>
 </div>
   
-Tema per Wordpress realizzato con Sage 10 e basato su <a href="https://wp.ditsolution.net/techpros/">quello sviluppato da Template Monster</a>. Perché Sage 10? Puoi gestire il tuo tema come se fosse un app di Laravel: gestisci i pacchetti e le dipendenze con composer e npm, inoltre puoi usare le Blade per realizzare le tue viste. Se ti fa schifo tutto questo, c'è sempre la versione classica con puro CSS e PHP che puoi <a href="https://github.com/Fabiolx26/techpros-theme">trovare qui</a>.
+Tema per Wordpress realizzato con Sage 10 e basato su <a href="https://wp.ditsolution.net/techpros/">quello sviluppato da Template Monster</a>. Perché Sage 10? Puoi gestire il tuo tema come se fosse un app di Laravel: gestisci i pacchetti e le dipendenze con composer e npm, inoltre puoi usare le Blade per realizzare le tue viste. Esiste anche la versione classica con puro CSS e PHP che puoi <a href="https://github.com/Fabiolx26/techpros-theme">trovare qui</a>.
 
 # Informazioni
 * PHP ^8.0
@@ -49,13 +49,6 @@ npm run build
 ```
 
 * Da CMS attivi il tema
-
-# Da sapere
-* Non è completamente integrato con il CMS, perché la maggior parte delle cose è scritta direttamente su file HTML e le immagini sono presenti negli assets. SE VUOI lascerò alcune righe commentate che potranno essere utili nel sostituire i testi/immagini con quello che vuoi tu, ma dovrai poi installare il famoso plugin <a href="https://wordpress.org/plugins/advanced-custom-fields/">Advanced Custom Fields</a> nel tuo progetto principale.
-* Realizzato su Ubuntu 22.04.3 LTS (MacOS === 💩)
-* Testato sui motori Quantum e Blink, non su WebKit perché è da gay e Safari fa cagare
-* Testato su Wordpress 6.2.2 e 6.3
-* È responsive fino alla vastità del cazzo che te ne frega
 
 # Link utili
 * <a href="https://roots.io/sage/docs/installation/">Documentazione di Sage</a>
