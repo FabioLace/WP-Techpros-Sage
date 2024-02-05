@@ -34,7 +34,7 @@ Tema per Wordpress realizzato con Sage 10 e basato su <a href="https://wp.ditsol
 
 # Deploy
 * Scarica la repo nella tua cartella "themes"
-* Apri il terminale nella cartella del tema e lancia 'sti comandi:
+* Apri il terminale nella cartella del tema e lancia questi comandi:
 ```sh
 composer require roots/acorn #Dovrebbe già esserci nel composer.lock, ma nel caso eseguilo non si sa mai
 composer install
@@ -42,7 +42,7 @@ yarn
 yarn build
 ```
 
-* Se vuoi usare npm e fare come cazzo ti pare, lancia questi comandi:
+* Se vuoi usare npm, lancia questi comandi:
 ```sh
 npm install
 npm run build
