@@ -11,14 +11,14 @@
     </p>
 </div>
   
-Wordpress theme made with Sage 10 and based on the one provided by <a href="https://wp.ditsolution.net/techpros/">Template Monster</a>. The version made with vanilla CSS and PHP is available at <a href="https://github.com/FabioLace/techpros-theme">this link</a>.
+Tema per Wordpress realizzato con Sage 10 e basato su <a href="https://wp.ditsolution.net/techpros/">quello sviluppato da Template Monster</a>. Esiste anche la versione classica con puro CSS e PHP che puoi <a href="https://github.com/FabioLace/techpros-theme">trovare qui</a>.
 
-# Info
+# Informazioni
 * PHP ^8.0
 * Roots/acorn: ^3.2
 * Node.js >= 16.0.0
   
-### DEV Dependencies
+### Dipendenze DEV
 
 ```sh
 "@roots/bud": "^6.15.2",
@@ -26,15 +26,15 @@ Wordpress theme made with Sage 10 and based on the one provided by <a href="http
 "@roots/sage": "^6.15.2"
 ```
 
-### External Libraries
+### Librerie usate
 * <a href="https://animate.style/">Animate.css 4.1.1</a>
 * <a href="https://getbootstrap.com/">Bootstrap 4.5.2</a> 
 * <a href="https://fontawesome.com/">Fontawesome 6.4.2</a>
 * <a href="https://swiperjs.com/">Swiper.js</a>
 
 # Deploy
-* Download the repo in the "themes" folder of your Wordpress project.
-* Open themes/techpros-sage in your terminal and launch these commands:
+* Scarica la repo nella tua cartella "themes"
+* Apri il terminale nella cartella del tema e lancia questi comandi:
 ```sh
 composer require roots/acorn
 composer install
@@ -42,13 +42,13 @@ yarn
 yarn build
 ```
 
-* Even if Sage 10 docs recommends yarn,you can also use npm:
+* Se vuoi usare npm, lancia questi comandi:
 ```sh
 npm install
 npm run build
 ```
 
-* Activate the theme from CMS
+* Da CMS attivi il tema
 
-# See also
-* <a href="https://roots.io/sage/docs/installation/">Sage Docs</a>
+# Link utili
+* <a href="https://roots.io/sage/docs/installation/">Documentazione di Sage</a>
