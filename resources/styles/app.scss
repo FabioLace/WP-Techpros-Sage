@@ -1,5 +1,8 @@
+@import 'bootstrap/scss/bootstrap';
+
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/functions";
 
 @import "./components/header";
 @import "./components/navbar";
@@ -20,19 +23,13 @@ body{
         color: #ffffff;
         transition: 0.5s;
 
-        &:hover{
-            background: $secondary-color;
-
-        }
+        &:hover{ background: $secondary-color; }
     }
 
-    h1,h2,h3{
-        font-family: 'Montserrat', sans-serif;
-    }
+    h1, h2, h3{ font-family: 'Montserrat', sans-serif; }
 
     .h5-line{
-        display: flex;
-        align-items: center;
+        @include flex-align-center;
         font-family: 'Montserrat', sans-serif;
 
         h5{
@@ -43,16 +40,11 @@ body{
         }
 
         .line{
-            display: block;
+            display: none;
             width: 70px;
             height: 2px;
             background-color: $secondary-color;
+            @include media-breakpoint-up(md){ display: block; }
         }
-    }
-}
-
-@media screen and (min-width: 319px) {
-    .h5-line .line{
-        display: none;
     }
 }

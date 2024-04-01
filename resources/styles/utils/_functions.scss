@@ -1,0 +1,14 @@
+@mixin make-square($size){
+    width: $size;
+    height: $size;
+}
+
+@mixin make-circle($size){
+    @include make-square($size);
+    border-radius: 50%;
+}
+
+@mixin set-mx($margin-x){
+    margin-left: $margin-x;
+    margin-right: $margin-x;
+}

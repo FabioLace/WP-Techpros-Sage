@@ -1,14 +1,11 @@
-/* NON SERVE LA MEDIA QUERY */
 .testimonials-and-text{
     background: url("../../../images/testi1.jpg") center center/cover no-repeat;
     padding: 85px 0px 116px;
 
     .text{
-        .h5-line{
-            h5{
-                font-size: 16px;
-                letter-spacing: 0.2px;
-            }
+        .h5-line h5{
+            font-size: 16px;
+            letter-spacing: 0.2px;
         }
 
         h3{
@@ -19,8 +16,7 @@
     }
 
     .testimonials-container{
-        display: flex;
-        @include align-justify-center;
+        @include flex-align-justify-center;
         margin: 50px 0;
 
         .single-testimonial{

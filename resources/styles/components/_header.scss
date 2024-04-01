@@ -1,44 +1,32 @@
-@media screen and (min-width: 319px){
-    .contacts-social{
-        display: none;
-    }
-}
+.contacts-social{
+    display: none;
+    background-color: $secondary-color;
+    padding: 10px 4em;
+    color: #ffffff;
+    @include media-breakpoint-up(lg){ display: flex; }
 
-@media screen and (min-width: 1023px){
-    .contacts-social{
-        display: flex;
-        background-color: $secondary-color;
-        padding: 10px 4em;
+    a,a:hover{
         color: #ffffff;
-            
-        a,a:hover{
-            color: #ffffff; //FORZATURA
-            text-decoration: none;
-        }
+        text-decoration: none;
+    }
 
-        i{
-            margin-right: 1px;
-        }
+    i{ margin-right: 1px; }
 
-        .contacts, .social{
-            @include row-align-center;
-        }
+    .contacts, .social{
+        @include flex-align-center;
+        flex-direction: row;
+    }
 
-        .contacts{
-            margin-left: 1em;
-            margin-right: auto;
+    .contacts{
+        margin-left: 1em;
+        margin-right: auto;
 
-            div{
-                margin: 0 1em;
-            }
-        }
+        div{ margin: 0 1em; }
+    }
 
-        .social{
-            margin-right: 1em;
+    .social{
+        margin-right: 1em;
 
-            a{
-                margin-left: 1em;
-            }
-        }
+        a{ margin-left: 1em; }
     }
 }

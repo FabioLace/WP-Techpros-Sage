@@ -1,146 +1,100 @@
-@media screen and (min-width: 319px){
-    .process{
-        margin: 50px 0;
+.process{
+    margin: 50px 0;
 
-        .text{
-            margin: unset;
+    .text{
+        margin: unset;
+        margin-bottom: 50px;
+        font-family: 'Montserrat', sans-serif;
+
+        h2{ font-size: 30px; }
+
+        .h5-line{
+            margin-bottom: 13px;
+
+            h5{ font-size: 16px; }
+        }
+    }
+
+    .step-grid{
+        @include flex-align-center;
+        flex-direction: column;
+        margin-top: 50px;
+        @include media-breakpoint-up(md){
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+        }
+
+        .step{
+            @include flex-align-justify-center;
+            flex-direction: column;
             margin-bottom: 50px;
-            font-family: 'Montserrat', sans-serif;
-    
-            h2{
-                font-size: 30px;
+            @include media-breakpoint-up(md){ margin-bottom: unset; }
+
+            .icon-counter{
+                @include flex-align-justify-center;
+                @include make-circle(120px);
+                position: relative;
+                background: linear-gradient(90deg, $primary-color 0%, $secondary-color 100%);
+                @include media-breakpoint-up(md){ @include make-square(80px); }
+                @include media-breakpoint-up(md){ @include make-square(120px); }
+
+                i{
+                    color: #ffffff;
+                    font-size: 50px;
+                    @include media-breakpoint-up(md){ font-size: 30px; }
+                    @include media-breakpoint-up(lg){ font-size: 50px; }
+                }
+
+                .counter{
+                    @include flex-align-justify-center;
+                    @include make-circle(50px);
+                    position: absolute;
+                    z-index: 1;
+                    color: $primary-color;
+                    background-color: #ffffff;
+                    top: 0px;
+                    right: -15px;
+                    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+                    @include media-breakpoint-up(md){ @include make-square(30px); }
+                    @include media-breakpoint-up(lg){ @include make-square(50px); }
+                }
             }
 
-            .h5-line{
-                margin-bottom: 13px;
-                
-                h5{
+            .dot-line{
+                @include col-align-center;
+                margin: 10px 0;
+
+                .dot, .vertical-line{ border: 1px solid #808080; }
+
+                .dot{
+                    @include make-circle(15px);
+                    background-color: none;
+                    margin-bottom: 2px;
+                }
+
+                .vertical-line{
+                    width: 2px;
+                    height: 40px;
+                }
+            }
+
+            .step-text{
+                width: 200px;
+
+                h2{
+                    font-weight: 700;
                     font-size: 16px;
                 }
             }
         }
 
-        .step-grid{
-            @include col-align-center;
-            margin-top: 50px;
-        
-            .step{
-                @include col-align-justify-center;
-                margin-bottom: 50px;
-
-                .icon-counter{
-                    @include align-justify-center;
-                    @include make-circle(120px);
-                    display: flex;
-                    position: relative;
-                    background: linear-gradient(90deg, $primary-color 0%, $secondary-color 100%);
-
-                    i{
-                        color: #ffffff;
-                        font-size: 50px;
-                    }
-                    .counter{
-                        @include align-justify-center;
-                        @include make-circle(50px);
-                        display: flex;
-                        position: absolute;
-                        z-index: 1;
-                        color: $primary-color;
-                        background-color: #ffffff;
-                        top: 0px;
-                        right: -15px;
-                        box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
-                    }
-                }
-
-                .dot-line{
-                    @include col-align-center;
-                    margin: 10px 0;
-
-                    .dot, .vertical-line{
-                        border: 1px solid #808080;
-                    }
-
-                    .dot{
-                        @include make-circle(15px);
-                        background-color: none;
-                        margin-bottom: 2px;
-                    }
-
-                    .vertical-line{
-                        width: 2px;
-                        height: 40px;
-                    }
-                }
-
-                .step-text{
-                    width: 200px;
-
-                    h2{
-                        font-weight: 700;
-                        font-size: 16px;
-                    }
-                }
-            }
-
-            .direction-sign{
-                display: none;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 767px) {
-    .process{
-        .step-grid{
-            display: grid;
-            align-items: unset;
-            grid-template-columns: auto auto auto auto auto;
-
-            .step{
-                margin-bottom: unset;
-
-                .icon-counter{
-                    @include make-square(80px);
-
-                    i{
-                        font-size: 30px;
-                    }
-
-                    .counter{
-                        @include make-square(30px);
-                    }
-                }
-            }
-
-            .direction-sign{
-                display: block;
-                width: 50px;
-                height: 10px;
-                margin: 0 10px;
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1023px) {
-    .process{
-        .step-grid{
-            .step{
-                .icon-counter{
-                    @include make-square(120px);
-
-                    i{
-                        font-size: 50px;
-                    }
-
-                    .counter{
-                        @include make-square(50px);
-                    }
-                }
-            }
-
-            .direction-sign{
+        .direction-sign{
+            display: none;
+            width: 50px;
+            height: 10px;
+            margin: 0 10px;
+            @include media-breakpoint-up(md){ display: block; }
+            @include media-breakpoint-up(lg){
                 width: 200px;
                 height: 40px;
             }

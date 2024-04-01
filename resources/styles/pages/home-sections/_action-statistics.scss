@@ -1,130 +1,106 @@
-@media screen and (min-width: 319px){
-    .action-statistics{
-        background-color: $secondary-color;
-        padding-top: 30px;
+.action-statistics{
+    background-color: $secondary-color;
+    padding-top: 30px;
+    
+    .cta{
+        @include col-align-center;
+        margin: 0 50px;
+        text-align: center;
+        color: #ffffff;
         
-        .cta{
-            @include col-align-center;
-            margin: 0 50px;
-            text-align: center;
-            color: #ffffff;
-            
-            h2{
-                font-weight: 700;
-                font-size: 14px;
-                margin: 45px auto 28px;
-            }
-
-            p{
-                font-size: 16px;
-                font-weight: 400;
-                margin-bottom: 1rem;
-            }
-
-            button{
-                background-color: #ffffff;
-                color: $primary-color;
-                padding: 12px 28px;
-                border-radius: 5px;
-                text-transform: none;
-            }
+        h2{
+            font-weight: 700;
+            font-size: 14px;
+            margin: 45px auto 28px;
+            @include media-breakpoint-up(lg){ font-size: 36px; }
         }
 
-        .statistics{
-            @include col-justify-center;
-            width: 100%;
-            margin: 50px auto 0px;
-            font-family: 'Montserrat', sans-serif;
-    /*      box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);*/
-        
-            .icon{
-                @include make-circle(50px);
-                @include align-justify-center;
-                display: flex;
-                font-size: larger;
-                margin-right: 10px;
-                background-color: $secondary-color;
-                color: #ffffff;
-            }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
 
-            .stat-blue, .stat-purple, .stat-white{
-                @include row-align-justify-center;
-                width: 100%;
-                height: 150px;
+        button{
+            background-color: #ffffff;
+            color: $primary-color;
+            padding: 12px 28px;
+            border-radius: 5px;
+            text-transform: none;
 
-                .stat-data {
-                    font-weight: bolder;
-                    text-transform: uppercase;
-
-                    h2{
-                        font-size: xx-large;
-                    }
-
-                    div{
-                        font-size: small;
-                    }
-                }
-            }
-
-            .stat-blue, .stat-purple{
-                color: #ffffff;
-            }
-
-            .stat-purple{
-                background-color: $secondary-color;
-
-                .icon{
+            @media (hover:hover){
+                &:hover{
                     background-color: $primary-color;
+                    color: #ffffff;
                 }
-            }
-
-            .stat-blue{
-                background-color: $primary-color;
-            }
-
-            .stat-white{
-                color: #000000;
-                background-color: #ffffff;
-            }
-        }
-    }
-}
-
-
-@media screen and (min-width: 767px) {
-    .action-statistics{
-        .statistics{
-            display: grid;
-            justify-content: center;
-            gap: unset;
-            grid-template-columns: 45% 45%;
-            column-gap: 0px;
-            margin: 50px 0px 0px;
-            row-gap: 0px;
-            grid-template-rows: 50% 50%;
-            box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.5);
-        }
-    }
-}
-
-@media screen and (min-width: 1023px) {
-    .action-statistics{
-        .cta{
-            h2{
-                font-size: 36px;
-            }
-
-            button:hover{
-                background-color: $primary-color;
-                color: #ffffff;
             }
         }
     }
 
     .statistics{
-        @include flex-row;
-        @include set-mx(auto);
-        box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);
-        width: 80%;
+        @include flex-justify-center;
+        flex-direction: column;
+        width: 100%;
+        margin: 50px auto 0px;
+        font-family: 'Montserrat', sans-serif;
+/*      box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);*/
+        @include media-breakpoint-up(md){
+            display: grid;
+            gap: unset;
+            grid-template-columns: 45% 45%;
+            column-gap: 0px;
+            @include set-mx(0);
+            row-gap: 0px;
+            grid-template-rows: 50% 50%;
+            box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.5);
+        }
+        @include media-breakpoint-up(lg){
+            @include flex-row;
+            @include set-mx(auto);
+            box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);
+            width: 80%;
+        }
+
+        .icon{
+            @include make-circle(50px);
+            @include align-justify-center;
+            display: flex;
+            font-size: larger;
+            margin-right: 10px;
+            background-color: $secondary-color;
+            color: #ffffff;
+        }
+
+        .stat-blue, .stat-purple, .stat-white{
+            @include row-align-justify-center;
+            width: 100%;
+            height: 150px;
+
+            .stat-data {
+                font-weight: bolder;
+                text-transform: uppercase;
+
+                h2{ font-size: xx-large; }
+
+                div{ font-size: small; }
+            }
+        }
+
+        .stat-blue, .stat-purple{ color: #ffffff; }
+
+        .stat-purple{
+            background-color: $secondary-color;
+
+            .icon{ background-color: $primary-color; }
+        }
+
+        .stat-blue{
+            background-color: $primary-color;
+        }
+
+        .stat-white{
+            color: #000000;
+            background-color: #ffffff;
+        }
     }
 }

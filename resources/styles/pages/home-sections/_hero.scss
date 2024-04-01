@@ -1,210 +1,168 @@
-@media screen and (min-width: 319px){
-    .hero{
-        //background-image: url("../images/slider1.jpg") IN TEORIA;
-        background: url('./../../../images/slider1.jpg') 50% 0 / auto scroll no-repeat;
-        height: auto;
-        color: #ffffff;
+.hero{
+    background: url('./../../../images/slider1.jpg') 50% 0 / auto scroll no-repeat;
+    height: auto;
+    color: #ffffff;
+    @include media-breakpoint-up(md){ margin-top: 0px; }
+    @include media-breakpoint-up(lg){ background: url('./../../../images/slider1.jpg') center center / cover scroll no-repeat; }
 
-        &-content{
-            @include col-align-center;
-            padding: 0 15px;
-            margin: 0 auto;
-            
-            .text{
-                margin: unset;
-                margin-top: 60px;
-                width: auto;
-                text-align: center;
-                
-                h4{
-                    text-transform: capitalize;
-                    font: 600 16px "Nunito", sans-serif;
-                    margin: 55px 0 24px;
-                }
 
-                h1{
-                    font: {
-                        size: 21px;
-                        weight: 900;
-                    }
-                    margin-bottom: 21px;
-                    line-height: 35px;
-                    text-transform: uppercase;
-                }
-
-                p{
-                    margin: 20px 0px 40px;
-                    width: 100%;
-                    font-size: 18px;
-                }
-            }
-
-            .hero-buttons{
-                button{
-                    margin-bottom: 60px;
-
-                    &.it-service{
-                        display: none;
-                    }
-                }
-            }
-        }
-
-        .main-services{
-            @include col-align-center;
-            width: 100%;
-            margin: 50px auto 0px;
-            box-shadow: 0px 20px 5px -5px rgba(0,0,0,0.3);
-    
-            .service{
-                display: flex;
-                align-items: center;
-                width: 100%;
-                height: fit-content;
-                transition: 0.4s;
-
-                &-content{
-                    padding: 50px;
-
-                        .icon-h2{
-                            @include row-align-center;
-                        
-                            h2{
-                                font-weight: 700;
-                                font-size: 20px;
-                            }
-
-                            i{
-                                margin-bottom: 10px;
-                                margin-right: 10px;
-                                font-size: 30px;
-                            }
-                        }
-
-                    .service-text{
-                        font-size: 16px;
-                    }
-                }
-
-                &-white{
-                    background-color: #ffffff;
-                    color: $ux-black;
-                    border-bottom: 10px solid $secondary-color;
-                    
-                    .icon-h2{
-                        i{
-                            color: $secondary-color;
-                            transition: 0.4s;
-                        }
-                    }
-                }
-
-                &-purple{
-                    background-color: $secondary-color;
-                    color: #ffffff;
-                    border-bottom: 10px solid $primary-color;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 767px){
-    .hero{
-        margin-top: 0px;
-
-        &-content{
-            .text{
-                p{
-                    width: 55%;
-                }
-            }
-
-            .hero-buttons{
-                @include flex-row;
-                gap: 10px;
-
-                button.it-service{
-                    display: block;
-                    background: $secondary-color;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1023px) {
-    .hero{
-        //background-image: url("../images/slider1.jpg") IN TEORIA;
-        background: url('./../../../images/slider1.jpg') center center / cover scroll no-repeat;
-
-        &-content{
+    &-content{
+        @include flex-align-center;
+        flex-direction: column;
+        padding: 0 15px;
+        margin: 0 auto;
+        @include media-breakpoint-up(lg){
             align-items: unset;
             justify-content: left;
             padding: 242px;
             font-size: unset;
+        }
+        
+        .text{
+            margin-top: 60px;
+            width: auto;
+            text-align: center;
+            @include media-breakpoint-up(lg){ text-align: unset; }
+            
+            h4{
+                text-transform: capitalize;
+                font: 600 16px "Nunito", sans-serif;
+                margin: 55px 0 24px;
+                @include media-breakpoint-up(lg){ font-size: 20px; }
+            }
 
-            .text{
-                width: auto;
-                text-align: unset;
-
-                h4{
-                    font-size: 20px;
-                }
-
-                h1{
+            h1{
+                font-size: 21px;
+                font-weight: 900 ;
+                margin-bottom: 21px;
+                line-height: 35px;
+                text-transform: uppercase;
+                @include media-breakpoint-up(lg){
                     font-size: 60px;
                     line-height: 71px;
                 }
+            }
 
-                p{
+            p{
+                margin: 20px 0px 40px;
+                width: 100%;
+                font-size: 18px;
+                @include media-breakpoint-up(md){ width: 55% };
+                @include media-breakpoint-up(lg){
                     margin: unset;
                     width: unset;
                 }
             }
+        }
 
-            .hero-buttons{
-                button{
+        .hero-buttons{
+            @include media-breakpoint-up(md){
+                @include flex-row;
+                gap: 10px;
+            }
+
+            button{
+                margin-bottom: 60px;
+                @include media-breakpoint-up(lg){
                     margin: 10px;
-                    margin-left: unset;
+                    margin-left: 0;
+                }
 
-                    &.it-service:hover{
-                        background: $primary-color;
+                &.it-service{
+                    display: none;
+                    background: $secondary-color;
+                    @include media-breakpoint-up(md){ display: block; }
+                    @media (hover:hover){
+                        &:hover{ background: $primary-color; }
                     }
                 }
             }
         }
+    }
 
-        .main-services{
+    .main-services{
+        @include flex-align-center;
+        flex-direction: column;
+        width: 100%;
+        margin: 50px auto 0px;
+        box-shadow: 0px 20px 5px -5px rgba(0,0,0,0.3);
+        @include media-breakpoint-up(lg){
             flex-direction: row;
             justify-content: center;
             align-items: unset;
-            width: 100%;
             box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);
+        }
 
-            .service{
+        .service{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: fit-content;
+            transition: 0.4s;
+            @include media-breakpoint-up(lg){
                 position: relative;
                 width: 400px;
                 height: 250px;
                 z-index: 99;
+            }
 
-                &-content{
+            &-content{
+                padding: 50px;
+                @include media-breakpoint-up(lg){
                     padding: 20px;
                     font-size: unset;
                 }
 
-                &-white:hover{
-                    color: #ffffff;
+                .icon-h2{
+                    @include row-align-center;
+                
+                    h2{
+                        font-weight: 700;
+                        font-size: 20px;
+                    }
 
-                    #purple-icon{
-                        color: #ffffff;
+                    i{
+                        margin-bottom: 10px;
+                        margin-right: 10px;
+                        font-size: 30px;
                     }
                 }
 
-                &-purple:hover{
-                    border-bottom: 10px solid $secondary-color;
+                .service-text{ font-size: 16px; }
+            }
+
+            &-white{
+                background-color: #ffffff;
+                color: $ux-black;
+                border-bottom: 10px solid $secondary-color;
+                
+                .icon-h2{
+                    i{
+                        color: $secondary-color;
+                        transition: 0.4s;
+                    }
                 }
 
+                @media(hover:hover){
+                    &:hover{
+                        color: #ffffff;
+
+                        #purple-icon{ color: #ffffff; }
+                    }
+                }
+            }
+
+            &-purple{
+                background-color: $secondary-color;
+                color: #ffffff;
+                border-bottom: 10px solid $primary-color;
+
+                @media(hover:hover){
+                    &:hover{ border-bottom: 10px solid $secondary-color; }
+                }
+            }
+
+            @include media-breakpoint-up(lg){
                 &-1{
                     &::before{
                         background: url("../../../images/flipbox1.jpg"),center center/cover no-repeat scroll;
@@ -217,9 +175,7 @@
                     }
 
                     &:hover{
-                        &:before, &:after{
-                            opacity: 1;
-                        }
+                        &:before, &:after{ opacity: 1; }
                     }
                 }
 
@@ -235,9 +191,7 @@
                     }
 
                     &:hover{
-                        &::before, &::after{
-                            opacity: 1;
-                        }
+                        &::before, &::after{ opacity: 1; }
                     }
                 }
 
@@ -253,9 +207,7 @@
                     }
 
                     &:hover{
-                        &::before, &::after{
-                            opacity: 1;
-                        }
+                        &::before, &::after{ opacity: 1; }
                     }
                 }
             }

@@ -1,47 +1,10 @@
-@media screen and (min-width: 319px){
-    .about-us{
-        margin: 50px 0;
+.about-us{
+    margin: 50px 0;
+    @include media-breakpoint-up(lg){ margin: 150px 0; }
 
-        .content{
-            @include flex-column;
-        
-            .text{
-                margin: 50px;
-
-                h2{
-                    font-weight: 700;
-                    font-size: 20px;
-                }
-
-                p{
-                    font-size: 16px;
-                }
-
-                .paragraphs{
-                    @include col-align-center;
-
-                    .paragraph{
-                        @include row-align-center;
-                        margin-top: 50px;
-
-                        i{
-                            width: 32px;
-                            color: $primary-color;
-                            font-size: xx-large;
-                            margin-right: 50px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (min-width: 1024px){
-    .about-us{
-        margin: 150px 0;
-
-        .content{
+    .content{
+        @include flex-column;
+        @include media-breakpoint-up(lg){
             flex-direction: row;
 
             .collage{
@@ -49,22 +12,47 @@
                 height: fit-content;
                 margin-right: 50px;
             }
+        }
 
-            .text{
+        .text{
+            margin: 50px;
+            @include media-breakpoint-up(lg){
                 margin: unset;
                 width: 40%;
 
                 .h5-line{
                     flex-direction: row;
 
-                    .line{
-                        margin-left: 30px;
-                    }
+                    .line{ margin-left: 30px; }
                 }
+            }
+
+            h2{
+                font-weight: 700;
+                font-size: 20px;
+            }
+
+            p{ font-size: 16px; }
+
+            .paragraphs{
+                @include flex-align-center;
+                flex-direction: column;
 
                 .paragraph{
-                    margin-top: unset;
-                    padding: 10px;
+                    @include flex-align-center;
+                    flex-direction: row;
+                    margin-top: 50px;
+                    @include media-breakpoint-up(lg){
+                        margin-top: unset;
+                        padding: 10px;
+                    }
+
+                    i{
+                        width: 32px;
+                        color: $primary-color;
+                        font-size: xx-large;
+                        margin-right: 50px;
+                    }
                 }
             }
         }
