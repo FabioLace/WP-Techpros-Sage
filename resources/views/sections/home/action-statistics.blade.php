@@ -42,7 +42,7 @@
         });
     </script>
     <div class="cta">
-        <h2>We Provide Worldwide IT Service For <br> Small & Mid-Sized Business</h2>
+        <h1 class="title-2">We Provide Worldwide IT Service For <br> Small & Mid-Sized Business</h2>
         <p>
             Nectar accumsan id nisi in ullamcorper. Nullam leo maximus vitae interdum non,
             sit amet est. Aenean sagittis tellus eu nicce esedatu occeanas del ano.
@@ -56,8 +56,8 @@
             </span>
             <div class="stat-data">
                 <div class="d-flex flex-row align-items-center">
-                    <h1 class="mr-1">0</h1>
-                    <h3>+</h3>
+                    <h1 class="title" class="mr-1">0</h1>
+                    <h1 class="title-3">+</h3>
                 </div>
                 <div>Happy Customers</div>
             </div>
@@ -68,8 +68,8 @@
             </span>
             <div class="stat-data">
                 <div class="d-flex flex-row align-items-center">
-                    <h1 class="mr-1">0</h1>
-                    <h3>+</h3>
+                    <h1 class="title" class="mr-1">0</h1>
+                    <h1 class="title-3">+</h3>
                 </div>
                 <div>Account number</div>
             </div>
@@ -80,8 +80,8 @@
             </span>
             <div class="stat-data">
                 <div class="d-flex flex-row align-items-center">
-                    <h1 class="mr-1">0</h1>
-                    <h3>K</h3>
+                    <h1 class="title" class="mr-1">0</h1>
+                    <h1 class="title-3">K</h3>
                 </div>
                 <div>Finished Projects</div>
             </div>
@@ -91,7 +91,7 @@
                 <i class="fa-solid fa-layer-group"></i>
             </span>
             <div class="stat-data">
-                <h1 class="mr-1">0</h1>
+                <h1 class="title" class="mr-1">0</h1>
                 <div>Win Awards</div>
             </div>
         </div>

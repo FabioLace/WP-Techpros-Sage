@@ -3,12 +3,13 @@
     padding-top: 30px;
     
     .cta{
-        @include col-align-center;
+        @include flex-align-center;
+        flex-direction: column;
         margin: 0 50px;
         text-align: center;
         color: #ffffff;
         
-        h2{
+        .title-2{
             font-weight: 700;
             font-size: 14px;
             margin: 45px auto 28px;
@@ -62,9 +63,8 @@
         }
 
         .icon{
+            @include flex-align-justify-center;
             @include make-circle(50px);
-            @include align-justify-center;
-            display: flex;
             font-size: larger;
             margin-right: 10px;
             background-color: $secondary-color;
@@ -72,7 +72,8 @@
         }
 
         .stat-blue, .stat-purple, .stat-white{
-            @include row-align-justify-center;
+            @include flex-align-justify-center;
+            flex-direction: row;
             width: 100%;
             height: 150px;
 
@@ -80,7 +81,7 @@
                 font-weight: bolder;
                 text-transform: uppercase;
 
-                h2{ font-size: xx-large; }
+                .title-2{ font-size: xx-large; }
 
                 div{ font-size: small; }
             }

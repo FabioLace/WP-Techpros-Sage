@@ -24,14 +24,14 @@
             text-align: center;
             @include media-breakpoint-up(lg){ text-align: unset; }
             
-            h4{
+            .title-4{
                 text-transform: capitalize;
                 font: 600 16px "Nunito", sans-serif;
                 margin: 55px 0 24px;
                 @include media-breakpoint-up(lg){ font-size: 20px; }
             }
 
-            h1{
+            .title{
                 font-size: 21px;
                 font-weight: 900 ;
                 margin-bottom: 21px;
@@ -113,10 +113,11 @@
                     font-size: unset;
                 }
 
-                .icon-h2{
-                    @include row-align-center;
+                .icon-.title-2{
+                    @include flex-align-center;
+                    flex-direction: row;
                 
-                    h2{
+                    .title-2{
                         font-weight: 700;
                         font-size: 20px;
                     }
@@ -136,11 +137,9 @@
                 color: $ux-black;
                 border-bottom: 10px solid $secondary-color;
                 
-                .icon-h2{
-                    i{
-                        color: $secondary-color;
-                        transition: 0.4s;
-                    }
+                .icon-h2 i{
+                    color: $secondary-color;
+                    transition: 0.4s;
                 }
 
                 @media(hover:hover){

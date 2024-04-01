@@ -26,13 +26,13 @@ body{
         &:hover{ background: $secondary-color; }
     }
 
-    h1, h2, h3{ font-family: 'Montserrat', sans-serif; }
+    h1, h2, .title-3{ font-family: 'Montserrat', sans-serif; }
 
     .h5-line{
         @include flex-align-center;
         font-family: 'Montserrat', sans-serif;
 
-        h5{
+        .title-5{
             text-transform: uppercase;
             font-weight: 700;
             font-size: 15px;

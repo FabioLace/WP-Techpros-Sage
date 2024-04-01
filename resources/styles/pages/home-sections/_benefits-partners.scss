@@ -55,7 +55,7 @@
                 }
 
                 &-text{
-                    h3{
+                    .title-3{
                         font-size: 20px;
                         margin: 13px 0px 3px;
                     }
@@ -74,7 +74,8 @@
         padding: 30px;
 
         .swiper-wrapper .swiper-slide{
-            @include row-align-justify-center;
+            @include flex-align-justify-center;
+            flex-direction: row;
             width: 187px;
             overflow: hidden;
             padding: 30px 20px 35px;

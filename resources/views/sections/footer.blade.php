@@ -2,20 +2,20 @@
     <div class="footer-1">
         <div class="contacts-container">
             <div class="contacts-template">
-                <h5>Quick Contact</h5>
+                <div class="title-5">Quick Contact</div>
                 <div class="contacts-content">
                     <div>+ (002) 0106-1245-741</div>
                     <div>info@cmssuperheroes.com</div>
                 </div>
             </div>
             <div class="contacts-template">
-                <h5>Company Address</h5>
+                <div class="title-5">Company Address</div>
                 <div class="contacts-content">
                     <div>2307 Beverley Rd Brooklyn,<br>New York 11226 U.S.</div>
                 </div>
             </div>
             <div class="contacts-template">
-                <h5>Quick Contact</h5>
+                <div class="title-5">Quick Contact</div>
                 <div class="contacts-content">
                     <div>Mon – Fri: 8am – 7pm </div>
                     <div>Sat – Sun: 9am – 8pm</div>
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="links">
-                <h5>Help links</h5>
+                <div class="title-5">Help links</div>
                 <a href="#">Managed IT services</a>
                 <a href="#">Cloud services</a>
                 <a href="#">IT support and helpdesk</a>
@@ -48,7 +48,7 @@
                 <a href="#">Free consultation</a>
             </div>
             <div class="links">
-                <h5>Important links</h5>
+                <div class="title-5">Important links</div>
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Services</a>

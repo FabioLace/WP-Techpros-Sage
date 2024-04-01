@@ -2,8 +2,8 @@
     <div class="services-content">
         <div class="text-button">
             <div class="text">
-                <h5>// Our Services</h5>
-                <h3>We Offer A Wide<br>Variety Of IT Services</h3>
+                <h5 class="title-5">// Our Services</h5>
+                <h1 class="title-3">We Offer A Wide<br>Variety Of IT Services</h3>
             </div>
             <button class="view-services">
                 View All Services <i class="fa-solid fa-angle-right"></i>
@@ -34,7 +34,7 @@
             </script>
             {{-- DA CICLARE CON PHP --}}
             <div class="card">
-                <h2>Cyber Security</h2>
+                <h1 class="title-2">Cyber Security</h2>
                 <span class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-network-wired"></i>
@@ -45,7 +45,7 @@
                 <a>Read more <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="card always-activated">
-                <h2>Web Development</h2>
+                <h1 class="title-2">Web Development</h2>
                 <span class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-laptop"></i>
@@ -56,7 +56,7 @@
                 <a>Read more <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="card">
-                <h2>Mobile Development</h2>
+                <h1 class="title-2">Mobile Development</h2>
                 <span class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-mobile-alt"></i>
@@ -67,7 +67,7 @@
                 <a href="#">Read more <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="card">
-                <h2>IT Consultancy</h2>
+                <h1 class="title-2">IT Consultancy</h2>
                 <span class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-briefcase"></i>

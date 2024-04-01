@@ -42,7 +42,8 @@ nav{
             }
 
             #hamburger{
-                @include col-align-center;
+                @include flex-align-center;
+                flex-direction: column;
                 margin: 0;
 
                 .line{

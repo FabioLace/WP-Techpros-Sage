@@ -1,10 +1,10 @@
 <div class="process d-flex flex-column align-items-center text-center">
     <div class="text">
         <div class="h5-line features d-flex flex-column align-items-center">
-            <h5>Process</h5>
+            <h5 class="title-5">Process</h5>
             <div class="line features-line"></div>
         </div>
-        <h2>Our Working Process</h2>
+        <h1 class="title-2">Our Working Process</h2>
     </div>
     <div class="step-grid">
         <div class="step">
@@ -17,7 +17,7 @@
                 <div class="vertical-line"></div>
             </div>
             <div class="step-text">
-                <h2>Select a problem</h2>
+                <h1 class="title-2">Select a problem</h2>
                 <p>
                     We have the technology and industry expertise to develop solutions that can connect people and businesses.
                 </p>
@@ -34,7 +34,7 @@
                 <div class="vertical-line"></div>
             </div>
             <div class="step-text">
-                <h2>Collect data</h2>
+                <h1 class="title-2">Collect data</h2>
                 <p>
                     We have the technology and industry expertise to develop solutions that can connect people and businesses.
                 </p>
@@ -51,7 +51,7 @@
                 <div class="vertical-line"></div>
             </div>
             <div class="step-text">
-                <h2>Process Data</h2>
+                <h1 class="title-2">Process Data</h2>
                 <p>We have the technology and industry expertise to develop solutions that can connect people and businesses.</p>
             </div>
         </div>

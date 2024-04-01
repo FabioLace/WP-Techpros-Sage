@@ -6,12 +6,12 @@
         margin-bottom: 50px;
         font-family: 'Montserrat', sans-serif;
 
-        h2{ font-size: 30px; }
+        .title-2{ font-size: 30px; }
 
         .h5-line{
             margin-bottom: 13px;
 
-            h5{ font-size: 16px; }
+            .title-5{ font-size: 16px; }
         }
     }
 
@@ -61,7 +61,8 @@
             }
 
             .dot-line{
-                @include col-align-center;
+                @include flex-align-center;
+                flex-direction: column;
                 margin: 10px 0;
 
                 .dot, .vertical-line{ border: 1px solid #808080; }
@@ -81,7 +82,7 @@
             .step-text{
                 width: 200px;
 
-                h2{
+                .title-2{
                     font-weight: 700;
                     font-size: 16px;
                 }

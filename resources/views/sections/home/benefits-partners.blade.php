@@ -3,10 +3,10 @@
         <img src="@asset('images/why-choose.png')">
         <div class="text">
             <div class="h5-line">
-                <h5>Our benefits</h5>
+                <h5 class="title-5">Our benefits</h5>
                 <div class="line"></div>
             </div>
-            <h3>Few Reasons Why You<br>Should Choose Us</h3>
+            <h1 class="title-3">Few Reasons Why You<br>Should Choose Us</h3>
             <p>Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
             <div class="paragraphs">
                 <div class="paragraph">
@@ -14,7 +14,7 @@
                         <i class="fa-solid fa-layer-group"></i>
                     </span>
                     <div class="paragraph-text">
-                        <h2>Product Designs</h2>
+                        <h1 class="title-2">Product Designs</h2>
                         <p>High standards of professionalism, integrity. Establishment of close working relationships.</p>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                         <i class="fa-regular fa-handshake"></i>
                     </span>
                     <div class="paragraph-text">
-                        <h2>Big Data Analysis</h2>
+                        <h1 class="title-2">Big Data Analysis</h2>
                         <p>Statistical analysis to help an organization to gain insights from large information web sets.</p>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                         <i class="fa-regular fa-handshake"></i>
                     </span>
                     <div class="paragraph-text">
-                        <h2>Mantain App Data</h2>
+                        <h1 class="title-2">Mantain App Data</h2>
                         <p>We Create the optimal platform to develop and run digital applications for our clients app.</p>
                     </div>
                 </div>

@@ -1,10 +1,10 @@
 <div class="testimonials-and-text d-flex flex-column align-items-center text-center">
     <div class="text">
         <div class="h5-line features d-flex flex-column align-items-center">
-            <h5>Client Rewiews</h5>
+            <h5 class="title-5">Client Rewiews</h5>
             <div class="line features-line"></div>
         </div>
-        <h3>What Say Our Customers</h3>
+        <h1 class="title-3">What Say Our Customers</h3>
     </div>
     <div class="testimonials-container">
         <div class="single-testimonial">
@@ -17,7 +17,7 @@
                 eiusmod tempor asem incididunt ut labore dolore magna aliqua. Ut enim adern minim
             </p>
             <div class="testimonial-name">
-                <h2>Giacomo Poretti</h2>
+                <h1 class="title-2">Giacomo Poretti</h2>
                 <span>Web Developer</span>
             </div>
         </div>
