@@ -1,0 +1,132 @@
+.main-services{
+    @include flex-align-center;
+    flex-direction: column;
+    width: 100%;
+    margin: 50px auto 0px;
+    box-shadow: 0px 20px 5px -5px rgba(0,0,0,0.3);
+    @include media-breakpoint-up(lg){
+        flex-direction: row;
+        justify-content: center;
+        align-items: unset;
+        box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);
+    }
+
+    .service{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        transition: 0.4s;
+        @include media-breakpoint-up(lg){
+            position: relative;
+            width: 400px;
+            height: 250px;
+            z-index: 99;
+        }
+
+        &-content{
+            padding: 50px;
+            @include media-breakpoint-up(lg){
+                padding: 20px;
+                font-size: unset;
+            }
+
+            .icon-.title-2{
+                @include flex-align-center;
+                flex-direction: row;
+
+                .title-2{
+                    font-weight: 700;
+                    font-size: 20px;
+                }
+
+                i{
+                    margin-bottom: 10px;
+                    margin-right: 10px;
+                    font-size: 30px;
+                }
+            }
+
+            .service-text{ font-size: 16px; }
+        }
+
+        &-white{
+            background-color: #ffffff;
+            color: $ux-black;
+            border-bottom: 10px solid $secondary-color;
+
+            .icon-h2 i{
+                color: $secondary-color;
+                transition: 0.4s;
+            }
+
+            @media(hover:hover){
+                &:hover{
+                    color: #ffffff;
+
+                    #purple-icon{ color: #ffffff; }
+                }
+            }
+        }
+
+        &-purple{
+            background-color: $secondary-color;
+            color: #ffffff;
+            border-bottom: 10px solid $primary-color;
+
+            @media(hover:hover){
+                &:hover{ border-bottom: 10px solid $secondary-color; }
+            }
+        }
+
+        @include media-breakpoint-up(lg){
+            &-1{
+                &::before{
+                    background: url("../../../images/flipbox1.jpg"),center center/cover no-repeat scroll;
+                    @include service-before-after;
+                }
+
+                &::after{
+                    background: rgba(67,186,255,0.90);
+                    @include service-before-after;
+                }
+
+                &:hover{
+                    &:before, &:after{ opacity: 1; }
+                }
+            }
+
+            &-2{
+                &::before{
+                    @include service-before-after;
+                    background: url("../../../images/flipbox2.jpg"),center center/cover no-repeat scroll;
+                }
+
+                &::after{
+                    @include service-before-after;
+                    background: rgba(67,186,255,0.90);
+                }
+
+                &:hover{
+                    &::before, &::after{ opacity: 1; }
+                }
+            }
+
+            &-3{
+                &::before{
+                    @include service-before-after;
+                    background: url("../../../images/flipbox3.jpg"),center center/cover no-repeat scroll;
+                }
+
+                &::after{
+                    @include service-before-after;
+                    background: rgba(67,186,255,0.90);
+                }
+
+                &:hover{
+                    &::before, &::after{ opacity: 1; }
+                }
+            }
+        }
+    }
+}

@@ -2,7 +2,7 @@
     <div class="benefits">
         <img src="@asset('images/why-choose.png')">
         <div class="text">
-            <div class="h5-line">
+            <div class="title-line">
                 <h5 class="title-5">Our benefits</h5>
                 <div class="line"></div>
             </div>

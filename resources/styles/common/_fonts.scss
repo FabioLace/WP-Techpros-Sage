@@ -1,8 +1,28 @@
 h1, h2, .title-3{ font-family: 'Montserrat', sans-serif; }
 
-.title-5{
+.title, .title-2, .title-5{
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 15px;
-    color: $secondary-color;
+}
+
+.title{
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.1;
+    @include media-breakpoint-up(lg){ font-size: 60px; }
+
+    &-2{
+        font-weight: 700;
+        font-size: 20px;
+    }
+
+    &-4{
+        font: 600 16px "Nunito", sans-serif;
+        @include media-breakpoint-up(lg){ font-size: 20px; }
+    }
+
+    &-5{
+        font-weight: 700;
+        font-size: 15px;
+        color: $secondary-color;
+    }
 }

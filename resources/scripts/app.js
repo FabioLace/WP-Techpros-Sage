@@ -1,7 +1,7 @@
 import domReady from '@roots/sage/client/dom-ready';
 import $ from 'jquery';
 import 'bootstrap';
-import Swiper from 'swiper';
+//import Swiper from 'swiper';
 
 /**
  * Application entrypoint
@@ -33,9 +33,9 @@ domReady(async () => {
             }
             if($(window).width() >= 992){
                 $('.contacts-social').hide();
-            }
-            if($('#logo').attr('src') !== imgPath + "logo-transparent.png"){
-                $('#logo').attr('src','/wp-content/themes/techpros-sage/resources/images/logo-transparent.png');
+                if($('#logo').attr('src') !== imgPath + "logo-transparent.png"){
+                    $('#logo').attr('src',imgPath + "logo-transparent.png");
+                }
             }
         } else {
             if($('nav').hasClass('nav-scroll')){
@@ -45,7 +45,7 @@ domReady(async () => {
                 $('.contacts-social').show();
             }
             if($('#logo').attr('src') === imgPath + "logo-transparent.png"){
-                $('#logo').attr('src','/wp-content/themes/techpros-sage/resources/images/main-logo.png');
+                $('#logo').attr('src', imgPath + "main-logo.png");
             }
         }
     }

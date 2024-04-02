@@ -17,7 +17,7 @@ body{
 
     a, a:hover{ text-decoration: none; }
 
-    .h5-line{
+    .title-line{
         @include flex-align-center;
         font-family: 'Montserrat', sans-serif;
 
@@ -26,6 +26,7 @@ body{
             width: 70px;
             height: 2px;
             background-color: $secondary-color;
+            margin-left: 1rem;
             @include media-breakpoint-up(md){ display: block; }
         }
     }

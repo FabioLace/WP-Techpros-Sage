@@ -10,10 +10,10 @@
                 </p>
             </div>
             <div class="hero-buttons animate__animated animate__fadeInUp animate__delay-1s">
-                <button class="button how-it-works">
+                <button class="button button-blue">
                     How it works <i class="fa-solid fa-angle-right"></i>
                 </button>
-                <button class="button it-service">
+                <button class="button button-purple">
                     It service <i class="fa-solid fa-angle-right"></i>
                 </button>
             </div>

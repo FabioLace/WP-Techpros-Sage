@@ -1,6 +1,6 @@
 <section class="testimonials-and-text d-flex flex-column align-items-center text-center">
     <div class="text">
-        <div class="h5-line features d-flex flex-column align-items-center">
+        <div class="title-line features d-flex flex-column align-items-center">
             <h5 class="title-5">Client Rewiews</h5>
             <div class="line features-line"></div>
         </div>
