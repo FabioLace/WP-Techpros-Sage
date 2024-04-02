@@ -1,4 +1,4 @@
-<div class="benefits-partners">
+<section class="benefits-partners">
     <div class="benefits">
         <img src="@asset('images/why-choose.png')">
         <div class="text">
@@ -86,4 +86,4 @@
             <div class="swiper-pagination"></div>
         </div>
     </div>
-</div>
+</section>

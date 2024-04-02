@@ -1,4 +1,4 @@
-<div class="action-statistics">
+<section class="action-statistics">
     <script>
         function animateCount(element, target, duration) {
             const start = 0;
@@ -96,4 +96,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

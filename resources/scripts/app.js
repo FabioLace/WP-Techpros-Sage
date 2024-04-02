@@ -7,58 +7,66 @@ import Swiper from 'swiper';
  * Application entrypoint
  */
 domReady(async () => {
-    /**
-    * EH, VOLEVI!! TI ASPETTAVI DI TROVARE SWIPER.JS VERO? PER ADESSO TE LO CARICO 
-    * DA CDN DIRETTAMENTE NELL'HEADER (SONO BARBARO, LO SO) DATO CHE NON RIESCO A FARLO FUNZIONARE DA QUI.
-    * PRIMA O POI LO VEDRAI QUI DOVE DOVREBBE STARE
-    */
 
-    const mobileDropdownOpeners = document.querySelectorAll('.mobile-dropdown-opener');
+    function resizeHero(){
+        var headerHeight = Math.round($('header').outerHeight());
+        if($('section.hero').length > 0){
+            $('section.hero').css('height', 'calc(100dvh - ' + headerHeight.toString() + 'px' + ')');
+            $('section.hero').css('margin-top', headerHeight.toString() + 'px');
+        }
+    }
+    resizeHero();
 
-    mobileDropdownOpeners.forEach(function (opener) {
-        opener.addEventListener('click', function () {
-            const parent = opener.parentElement;
-            toggleDropdown(parent);
-        });
-    });
+    $(window).on('resize', () => { resizeHero(); });
 
+    const imgPath = "/wp-content/themes/techpros-sage/resources/images/";
+
+    //HANDLE SCROLL
     function handleScroll() {
         const scrollTop = window.scrollY;
         const windowHeight = window.innerHeight;
         const documentHeight = document.body.clientHeight;
-
         const scrollPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
         if (scrollPercentage > 1) {
-            $('nav').classList.add('nav-scroll');
-            $('#logo').src = 'wp-content/themes/techpros/assets/images/logo-transparent.png';
+            if(!$('nav').hasClass('nav-scroll')){
+                $('nav').addClass('nav-scroll');
+            }
+            if($(window).width() >= 992){
+                $('.contacts-social').hide();
+            }
+            if($('#logo').attr('src') !== imgPath + "logo-transparent.png"){
+                $('#logo').attr('src','/wp-content/themes/techpros-sage/resources/images/logo-transparent.png');
+            }
         } else {
-            $('nav').classList.remove('nav-scroll');
-            $('#logo').src = 'wp-content/themes/techpros/assets/images/main-logo.png';
+            if($('nav').hasClass('nav-scroll')){
+                $('nav').removeClass('nav-scroll');
+            }
+            if($(window).width() >= 992){
+                $('.contacts-social').show();
+            }
+            if($('#logo').attr('src') === imgPath + "logo-transparent.png"){
+                $('#logo').attr('src','/wp-content/themes/techpros-sage/resources/images/main-logo.png');
+            }
         }
     }
-
     handleScroll();
     window.addEventListener('scroll', handleScroll);
 
-
+    //HAMBURGER
     $('#hamburger').on('click',() =>{
-        if($('#hamburger').hasClass('hamburger-is-open')){
-            $('#hamburger').removeClass('hamburger-is-open');
-            $('.mobile-nav-links').removeClass('mobile-nav-links-is-open');
-        } else {
-            $('#hamburger').addClass('hamburger-is-open');
-            $('.mobile-nav-links').addClass('mobile-nav-links-is-open');
-        }
+        $('#hamburger').toggleClass('hamburger-is-open');
+        $('.mobile-nav-links').toggleClass('mobile-nav-links-is-open');
     });
 
-    //FUNZIONE PER APERTURA DROPDOWN
+    //DROPDOWN
+    $('.mobile-dropdown-opener').on('click', () => {
+        var parent = $(this).parent();
+        toggleDropdown(parent);
+    });
+
     function toggleDropdown(menuElement) {
-        var dropdown = menuElement.querySelector('.mobile-dropdown');
-        if (dropdown.style.display === 'block') {
-            dropdown.style.display = 'none';
-        } else {
-            dropdown.style.display = 'block';
-        }
+        var dropdown = $(menuElement).find('.mobile-dropdown');
+        dropdown.toggle();
     }
 });
 

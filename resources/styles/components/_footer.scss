@@ -2,28 +2,9 @@ footer{
     background-color: #211E3B;
     color: #ffffff;
 
-    .contacts-container, .footer-2-container{
-        @include flex-align-justify-center;
-        flex-direction: column;
-        text-align: center;
-        gap: 50px;
-        font-size: smaller;
-        @include media-breakpoint-up(lg){
-            flex-direction: row;
-            gap: unset;
-            text-align: unset;
-            font-size: unset;
-        }
-    }
-
     .footer-1{
         border-bottom: 1px solid #FFFF;
         padding: 40px 0px;
-
-        .contacts-container .contacts-template{
-            @include flex-column;
-            @include media-breakpoint-up(lg){ margin-right: 50px; }
-        }
     }
 
     .footer-2{
@@ -31,9 +12,7 @@ footer{
         padding: 40px 0px;
 
         .brand-identity{
-            @include media-breakpoint-up(md){ width: 40%; }
             @include media-breakpoint-up(lg){
-                margin-right: 50px;
                 img, .social{ margin-bottom: 10px; }
             }
 
@@ -47,18 +26,17 @@ footer{
                     margin-right: 10px;
                 }
             }
+        }
 
-            .links{
-                @include flex-column;
-                @include media-breakpoint-up(lg){ margin-right: 50px; }
+        .links{
+            @include flex-column;
 
-                a{
-                    color: #ffffff;
-                    @media (hover:hover){
-                        transition: .3s;
+            a{
+                color: #ffffff;
+                @media (hover:hover){
+                    transition: .3s;
 
-                        &:hover{ color: $primary-color; }
-                    }
+                    &:hover{ color: $primary-color; }
                 }
             }
         }

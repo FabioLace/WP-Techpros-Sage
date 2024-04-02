@@ -1,4 +1,4 @@
-<div class="our-services">
+<section class="our-services">
     <div class="services-content">
         <div class="text-button">
             <div class="text">
@@ -79,4 +79,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

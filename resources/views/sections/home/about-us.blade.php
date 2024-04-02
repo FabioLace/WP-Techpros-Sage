@@ -1,4 +1,4 @@
-<div class="about-us">
+<section class="about-us">
     <div class="content">
         <img class="collage" src="@asset('images/about1.png' )">
         <div class="text">
@@ -35,4 +35,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

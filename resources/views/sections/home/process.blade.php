@@ -1,4 +1,4 @@
-<div class="process d-flex flex-column align-items-center text-center">
+<section class="process d-flex flex-column align-items-center text-center">
     <div class="text">
         <div class="h5-line features d-flex flex-column align-items-center">
             <h5 class="title-5">Process</h5>
@@ -56,4 +56,4 @@
             </div>
         </div>
     </div>
-</div>
+</section>

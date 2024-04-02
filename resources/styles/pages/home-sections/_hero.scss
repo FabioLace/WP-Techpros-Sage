@@ -5,25 +5,29 @@
     @include media-breakpoint-up(md){ margin-top: 0px; }
     @include media-breakpoint-up(lg){ background: url('./../../../images/slider1.jpg') center center / cover scroll no-repeat; }
 
-
     &-content{
-        @include flex-align-center;
+        @include flex-align-justify-center;
         flex-direction: column;
         padding: 0 15px;
-        margin: 0 auto;
         @include media-breakpoint-up(lg){
-            align-items: unset;
+            margin-top: auto;
+            margin-bottom: auto;
             justify-content: left;
-            padding: 242px;
+            //padding: 242px;
+            align-items: unset;
             font-size: unset;
         }
-        
+
         .text{
-            margin-top: 60px;
+            @include flex-align-justify-center;
+            flex-direction: column;
             width: auto;
             text-align: center;
-            @include media-breakpoint-up(lg){ text-align: unset; }
-            
+            @include media-breakpoint-up(lg){
+                text-align: left;
+                align-items: flex-start;
+            }
+
             .title-4{
                 text-transform: capitalize;
                 font: 600 16px "Nunito", sans-serif;
@@ -116,7 +120,7 @@
                 .icon-.title-2{
                     @include flex-align-center;
                     flex-direction: row;
-                
+
                     .title-2{
                         font-weight: 700;
                         font-size: 20px;
@@ -136,7 +140,7 @@
                 background-color: #ffffff;
                 color: $ux-black;
                 border-bottom: 10px solid $secondary-color;
-                
+
                 .icon-h2 i{
                     color: $secondary-color;
                     transition: 0.4s;

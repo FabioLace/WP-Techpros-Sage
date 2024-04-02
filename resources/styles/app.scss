@@ -15,9 +15,7 @@
 body{
     font-family: 'Nunito', sans-serif;
 
-    a{
-        text-decoration: none;
-    }
+    a, a:hover{ text-decoration: none; }
 
     .h5-line{
         @include flex-align-center;
