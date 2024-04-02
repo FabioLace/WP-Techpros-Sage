@@ -6,12 +6,11 @@
         @include media-breakpoint-up(lg){
             flex-direction: row;
 
-            .collage{
+            /* .collage{
                 margin: auto 0;
                 width: 50%;
                 height: auto;
-                margin-right: 50px;
-            }
+            } */
         }
 
         .text{
@@ -23,7 +22,10 @@
                 .title-line{ flex-direction: row; }
             }
 
-            .title-2 span{ color: $primary-color; }
+            .title-2{
+                text-transform: capitalize;
+                span{ color: $primary-color; }
+            }
 
             .paragraphs{
                 @include flex-align-center;

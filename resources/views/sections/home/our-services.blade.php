@@ -1,80 +1,54 @@
 <section class="our-services">
-    <div class="services-content">
+    <div class="container services-content">
         <div class="text-button">
-            <div class="text">
-                <h5 class="title-5">// Our Services</h5>
-                <h1 class="title-3">We Offer A Wide<br>Variety Of IT Services</h3>
+            <div class="row">
+                <div class="col text">
+                    <div class="title-5">// Our Services</div>
+                    <div class="title-3">We Offer A Wide<br>Variety Of IT Services</div>
+                </div>
+                <div class="col view-services">
+                    <button>View All Services <i class="fa-solid fa-angle-right"></i></button>
+                </div>
             </div>
-            <button class="view-services">
-                View All Services <i class="fa-solid fa-angle-right"></i>
-            </button>
         </div>
         <div class="services-cards">
-            <script>
-                document.addEventListener("DOMContentLoaded", function() {
-                    const serviceCards = document.getElementsByClassName("card");
-                    const circleCards = document.getElementsByClassName("circle");
-
-                    for (let i = 0; i < serviceCards.length; i++) {
-                        serviceCards[i].addEventListener("mouseover", function() {
-                            if (!serviceCards[i].classList.contains("always-activated")) {
-                                serviceCards[i].classList.add("activated");
-                                circleCards[i].style.display = "block";
-                            }
-                        });
-
-                        serviceCards[i].addEventListener("mouseout", function() {
-                            if (!serviceCards[i].classList.contains("always-activated")) {
-                                serviceCards[i].classList.remove("activated");
-                                circleCards[i].style.display = "none";
-                            }
-                        });
-                    }
-                });
-            </script>
             {{-- DA CICLARE CON PHP --}}
             <div class="card">
-                <h1 class="title-2">Cyber Security</h2>
+                <div class="title-2">Cyber Security</div>
                 <span class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-network-wired"></i>
                 </span>
-                <div>
-                    Trouble that bound ensue that equaly blame belongs to those through weakness.
-                </div>
+                <div>Trouble that bound ensue that equaly blame belongs to those through weakness.</div>
                 <a>Read more <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="card always-activated">
-                <h1 class="title-2">Web Development</h2>
+                <div class="title-2">Web Development</div>
                 <span class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-laptop"></i>
                 </span>
-                <div>
-                    Trouble that bound ensue that equaly blame belongs to those through weakness.
-                </div>
-                <a>Read more <i class="fa-solid fa-arrow-right"></i></a>
+                <div>Trouble that bound ensue that equaly blame belongs to those through weakness.</div>
+                <a href="#">
+                    Read more <i class="fa-solid fa-arrow-right"></i>
+                </a>
             </div>
             <div class="card">
-                <h1 class="title-2">Mobile Development</h2>
+                <div class="title-2">Mobile Development</div>
                 <span class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-mobile-alt"></i>
                 </span>
-                <div>
-                    Trouble that bound ensue that equaly blame belongs to those through weakness.
-                </div>
+                <div>Trouble that bound ensue that equaly blame belongs to those through weakness.</div>
                 <a href="#">Read more <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
+            </div>        
             <div class="card">
-                <h1 class="title-2">IT Consultancy</h2>
+                <div class="title-2">IT Consultancy</div>
                 <span class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-briefcase"></i>
                 </span>
-                <div>
-                    Trouble that bound ensue that equaly blame belongs to those through weakness.
-                </div>
+                <div>Trouble that bound ensue that equaly blame belongs to those through weakness.</div>
                 <a>Read more <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>

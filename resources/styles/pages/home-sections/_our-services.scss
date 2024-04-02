@@ -1,20 +1,23 @@
 .our-services{
     background-color: $secondary-color;
-    color: #ffffff;
     font-family: 'Montserrat', sans-serif;
 
     .services-content{
-        padding: 100px 0 50px;
-        @include media-breakpoint-up(lg){ padding: 100px 121px; }
+        padding-top: 50px;
+        padding-bottom: 100px;
+        color: #ffffff;
+
+        .row{
+            width: 100%;
+            align-items: center;
+        }
 
         .text-button{
             @include flex-column;
             margin-bottom: 50px;
-            margin-left: 50px;
             @include media-breakpoint-up(md){
                 flex-direction: row;
                 align-items: center;
-                margin-right: 50px;
             }
             @include media-breakpoint-up(lg){ @include set-mx(unset); }
 
@@ -35,31 +38,34 @@
                 }
             }
         
-            button.view-services{
-                @include make-square(fit-content);
-                border-radius: 5px;
-                text-transform: capitalize;
-                border: 5px solid transparent;
-                padding: 10px 15px;
-                margin-top: 5px;
-                @include media-breakpoint-up(lg){
-                    margin-top: unset;
-                    margin-left: auto;
-                    padding: 15px 20px;
-                }
-                @media (hover:hover){
-                    color: $primary-color;
-                    border-color: $primary-color;
-                    background-color: $secondary-color;
+            .view-services{
+                display: flex;
+                justify-content: flex-end;
+
+                button{
+                    @include make-square(fit-content);
+                    border-radius: 5px;
+                    color: #ffffff;
+                    background-color: $primary-color;
+                    text-transform: capitalize;
+                    border: 2px solid transparent;
+                    padding: 10px 15px;
+                    transition: .3s;
+                    @media (hover:hover){
+                        &:hover{
+                            color: $primary-color;
+                            border-color: $primary-color;
+                            background-color: $secondary-color;
+                        }
+                    }
                 }
             }
         }
 
         .services-cards{
-            @include flex-column;
+            /*@include flex-column;
             gap: 15px;
-            margin: 80px;
-            @include media-breakpoint-up(md){
+             @include media-breakpoint-up(md){
                 display: grid;
                 justify-content: center;
                 gap: unset;
@@ -68,19 +74,18 @@
                 column-gap: 15px;
                 row-gap: 15px;
                 grid-template-rows: 50% 50%;
-            }
-            @include media-breakpoint-up(lg){ @include flex-row }
+            } 
+            @include media-breakpoint-up(lg){ @include flex-row }*/
 
             .card{
                 @include flex-align-justify-center;
+                color: #ffffff;
+                position: relative;
                 background: none;
                 border: 2px solid $primary-color;
                 text-align: center;
                 padding: 10px;
-                @include media-breakpoint-up(lg){
-                    margin: 10px;
-                    transition: all 0.3s;
-                }
+                @include media-breakpoint-up(lg){ transition: all .3s; }
 
                 .title-2{
                     margin-top: 10px;
@@ -90,7 +95,6 @@
                 .icon-card{
                     @include flex-align-justify-center;
                     @include make-circle(100px);
-                    display: flex;
                     background-color: #ffffff;
                     color: $primary-color;
                     margin: 10px;

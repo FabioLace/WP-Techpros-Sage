@@ -1,13 +1,12 @@
 import domReady from '@roots/sage/client/dom-ready';
 import $ from 'jquery';
 import 'bootstrap';
-//import Swiper from 'swiper';
+import Swiper from 'swiper';
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
-
     function resizeHero(){
         var headerHeight = Math.round($('header').outerHeight());
         if($('section.hero').length > 0){
@@ -61,13 +60,39 @@ domReady(async () => {
     //DROPDOWN
     $('.mobile-dropdown-opener').on('click', () => {
         var parent = $(this).parent();
-        toggleDropdown(parent);
+        parent.find('.mobile-dropdown').toggle();
     });
 
-    function toggleDropdown(menuElement) {
-        var dropdown = $(menuElement).find('.mobile-dropdown');
-        dropdown.toggle();
-    }
+    //SERVICE CARDS
+    $(".card").each(function(index) {
+        $(this).on("mouseenter", function() {
+            if (!$(this).hasClass("always-activated")) {
+                $(this).addClass("activated");
+                $(".circle").eq(index).css("display", "block");
+            }
+        }).on("mouseleave", function() {
+            if (!$(this).hasClass("always-activated")) {
+                $(this).removeClass("activated");
+                $(".circle").eq(index).css("display", "none");
+            }
+        });
+    });
+
+    //SWIPER (UPDATE)
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        centeredSlides: true,
+        spaceBetween: 10,
+        loop: true,
+        styleMode: false,
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+
 });
 
 /**

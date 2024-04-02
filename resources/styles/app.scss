@@ -20,6 +20,7 @@ body{
     .title-line{
         @include flex-align-center;
         font-family: 'Montserrat', sans-serif;
+        color: $secondary-color;
 
         .line{
             display: none;

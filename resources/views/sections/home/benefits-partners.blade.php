@@ -3,10 +3,10 @@
         <img src="@asset('images/why-choose.png')">
         <div class="text">
             <div class="title-line">
-                <h5 class="title-5">Our benefits</h5>
+                <div class="title-5">Our benefits</div>
                 <div class="line"></div>
             </div>
-            <h1 class="title-3">Few Reasons Why You<br>Should Choose Us</h3>
+            <div class="title-3">Few Reasons Why You<br>Should Choose Us</div>
             <p>Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
             <div class="paragraphs">
                 <div class="paragraph">
@@ -14,7 +14,7 @@
                         <i class="fa-solid fa-layer-group"></i>
                     </span>
                     <div class="paragraph-text">
-                        <h1 class="title-2">Product Designs</h2>
+                        <div class="title-2">Product Designs</div>
                         <p>High standards of professionalism, integrity. Establishment of close working relationships.</p>
                     </div>
                 </div>
@@ -23,7 +23,7 @@
                         <i class="fa-regular fa-handshake"></i>
                     </span>
                     <div class="paragraph-text">
-                        <h1 class="title-2">Big Data Analysis</h2>
+                        <div class="title-2">Big Data Analysis</div>
                         <p>Statistical analysis to help an organization to gain insights from large information web sets.</p>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                         <i class="fa-regular fa-handshake"></i>
                     </span>
                     <div class="paragraph-text">
-                        <h1 class="title-2">Mantain App Data</h2>
+                        <div class="title-2">Mantain App Data</div>
                         <p>We Create the optimal platform to develop and run digital applications for our clients app.</p>
                     </div>
                 </div>
@@ -40,32 +40,6 @@
         </div>
     </div>
     <div class="partners mt-5">
-        <script>
-            window.addEventListener('load', function () {
-                if(typeof Swiper !== 'undefined') {
-                    console.log("SWIPER IS DEFINED");
-                    try {
-                        const swiper = new Swiper(".swiper", {
-                            slidesPerView: 3,
-                            centeredSlides: true,
-                            spaceBetween: 10,
-                            loop: true,
-                            styleMode: false,
-                            pagination: {
-                                el: '.swiper-pagination',
-                            },
-                            scrollbar: {
-                                el: '.swiper-scrollbar',
-                            },
-                        });
-                    } catch (err) {
-                        console.log(err);
-                    }
-                } else {
-                    console.log("SWIPER IS NOT DEFINED");
-                }
-            });
-        </script>
         <div class="swiper">
             <div class="swiper-wrapper">
                 @php
