@@ -1,14 +1,12 @@
 <section class="our-services">
     <div class="container services-content">
-        <div class="text-button">
-            <div class="row">
-                <div class="col text">
-                    <div class="title-5">// Our Services</div>
-                    <div class="title-3">We Offer A Wide<br>Variety Of IT Services</div>
-                </div>
-                <div class="col view-services">
-                    <button>View All Services <i class="fa-solid fa-angle-right"></i></button>
-                </div>
+        <div class="row text-button">
+            <div class="col text">
+                <div class="title-5">// Our Services</div>
+                <div class="title-3">We Offer A Wide<br>Variety Of IT Services</div>
+            </div>
+            <div class="col view-services">
+                <button>View All Services <i class="fa-solid fa-angle-right"></i></button>
             </div>
         </div>
         <div class="services-cards">

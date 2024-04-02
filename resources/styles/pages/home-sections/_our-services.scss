@@ -7,19 +7,9 @@
         padding-bottom: 100px;
         color: #ffffff;
 
-        .row{
-            width: 100%;
-            align-items: center;
-        }
-
         .text-button{
-            @include flex-column;
+            align-items: center;
             margin-bottom: 50px;
-            @include media-breakpoint-up(md){
-                flex-direction: row;
-                align-items: center;
-            }
-            @include media-breakpoint-up(lg){ @include set-mx(unset); }
 
             .text{
                 margin: unset;
@@ -37,7 +27,7 @@
                     margin-bottom: 10px;
                 }
             }
-        
+
             .view-services{
                 display: flex;
                 justify-content: flex-end;
@@ -63,19 +53,15 @@
         }
 
         .services-cards{
-            /*@include flex-column;
+            @include flex-column;
             gap: 15px;
-             @include media-breakpoint-up(md){
+            @include media-breakpoint-up(md){
                 display: grid;
                 justify-content: center;
-                gap: unset;
-                margin: unset;
-                grid-template-columns: 45% 45%;
-                column-gap: 15px;
-                row-gap: 15px;
-                grid-template-rows: 50% 50%;
-            } 
-            @include media-breakpoint-up(lg){ @include flex-row }*/
+                grid-template-columns: auto auto;
+                grid-template-rows: auto auto;
+            }
+            @include media-breakpoint-up(lg){ @include flex-row }
 
             .card{
                 @include flex-align-justify-center;
@@ -85,7 +71,7 @@
                 border: 2px solid $primary-color;
                 text-align: center;
                 padding: 10px;
-                @include media-breakpoint-up(lg){ transition: all .3s; }
+                transition: all .3s;
 
                 .title-2{
                     margin-top: 10px;
@@ -122,8 +108,9 @@
                     margin: 20px 0;
                 }
 
-                &.activated, &.always-activated{
+                &:hover, &.always-activated{
                     background-color: $primary-color;
+
                     .circle{
                         display: block;
 
@@ -138,7 +125,7 @@
                     }
                 }
 
-                &.activated, &.always-activated:hover{ transform: translatey(-5px); }
+                &:hover, &.always-activated:hover{ transform: translatey(-5px); }
             }
         }
     }

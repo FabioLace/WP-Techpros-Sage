@@ -63,21 +63,6 @@ domReady(async () => {
         parent.find('.mobile-dropdown').toggle();
     });
 
-    //SERVICE CARDS
-    $(".card").each(function(index) {
-        $(this).on("mouseenter", function() {
-            if (!$(this).hasClass("always-activated")) {
-                $(this).addClass("activated");
-                $(".circle").eq(index).css("display", "block");
-            }
-        }).on("mouseleave", function() {
-            if (!$(this).hasClass("always-activated")) {
-                $(this).removeClass("activated");
-                $(".circle").eq(index).css("display", "none");
-            }
-        });
-    });
-
     //SWIPER (UPDATE)
     const swiper = new Swiper(".swiper", {
         slidesPerView: 3,
@@ -92,7 +77,6 @@ domReady(async () => {
             el: '.swiper-scrollbar',
         },
     });
-
 });
 
 /**
