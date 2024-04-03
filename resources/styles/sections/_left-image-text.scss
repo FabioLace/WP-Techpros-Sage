@@ -1,0 +1,41 @@
+.left-image-text{
+    .container{
+        @include flex-column;
+        @include media-breakpoint-up(lg){ flex-direction: row; }
+
+        .left-image{ width: 100%; }
+
+        .text{
+            margin: 50px;
+            @include media-breakpoint-up(lg){
+                margin: unset;
+                .title-line{ flex-direction: row; }
+            }
+
+            .title-2{
+                text-transform: capitalize;
+                span{ color: $primary-color; }
+            }
+
+            .paragraphs{
+                @include flex-align-center;
+                flex-direction: column;
+                gap: 2rem;
+
+                .paragraph{
+                    @include flex-align-center;
+                    flex-direction: row;
+
+                    i{
+                        width: 32px;
+                        color: $primary-color;
+                        font-size: xx-large;
+                        margin-right: 50px;
+                    }
+
+                    p{ margin-bottom: 0; }
+                }
+            }
+        }
+    }
+}

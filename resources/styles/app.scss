@@ -10,12 +10,16 @@
 @import "./components/header";
 @import "./components/footer";
 
+@import "./sections/left-image-text";
+
 @import "./pages/home";
 
 body{
     font-family: 'Nunito', sans-serif;
 
     a, a:hover{ text-decoration: none; }
+
+    section{ margin-bottom: 100px}
 
     .title-line{
         @include flex-align-center;

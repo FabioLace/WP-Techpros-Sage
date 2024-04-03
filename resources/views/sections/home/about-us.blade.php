@@ -1,13 +1,13 @@
-<section class="about-us">
+<section class="left-image-text about-us">
     <div class="container">
         <div class="row">
             <div class="col">
-                <img class="collage" src="@asset('images/about1.png' )">
+                <img class="left-image" src="@asset('images/about1.png' )">
             </div>
             <div class="col text">
                 <div class="title-line">
                     <div class="title-5">About Us</div>
-                    <div class="line"></div>
+                    <span class="line"></span>
                 </div>
                 <div class="title-2">We are Techpros,<br>Established <span>Since 1999</span></div>
                 <p>

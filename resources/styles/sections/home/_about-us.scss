@@ -1,7 +1,5 @@
-.about-us{
-    margin: 50px 0;
-
-    .container{
+/*.about-us{
+     .container{
         @include flex-column;
         @include media-breakpoint-up(lg){ flex-direction: row; }
 
@@ -36,5 +34,5 @@
                 }
             }
         }
-    }
-}
+    } 
+}*/

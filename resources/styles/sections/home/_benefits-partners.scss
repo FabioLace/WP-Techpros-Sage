@@ -1,0 +1,55 @@
+.benefits-partners{    
+    .paragraphs{
+
+        .icon{
+            @include flex-align-justify-center;
+            padding: 25px;
+            font-size: larger;
+            width: fit-content;
+            margin-right: 20px;
+            border-radius: 50%;
+            background-color: #ffffff;
+            box-shadow: 3px 2px 18px 0px rgb(0 0 0 / 10%);
+
+            i{
+                width: unset!important;
+                margin-right: 0!important;
+            }
+
+            @media (hover:hover){
+                transition: .3s;
+
+                i{ transition: 0.3s; }
+
+                &:hover{
+                    background-color: $secondary-color;
+
+                    i{ color: #ffffff; }
+                }
+            }
+        }
+    }
+
+    .partners .swiper{
+        width: 100%;
+        padding: 30px;
+
+        .swiper-wrapper .swiper-slide{
+            @include flex-align-justify-center;
+            flex-direction: row;
+            width: 187px;
+            overflow: hidden;
+            padding: 30px 20px 35px;
+            filter: contrast(0);
+            transition: 0.3s;
+            @media (hover:hover){
+                &:hover{
+                    filter: contrast(1);
+                    opacity: 1;
+                    cursor: pointer;
+                    box-shadow: 11px 10px 28px 0px rgb(0 0 0 / 10%);
+                }
+            }
+        }
+    }
+}
