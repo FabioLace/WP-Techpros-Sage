@@ -1,42 +1,7 @@
 .action-statistics{
     background-color: $secondary-color;
     padding-top: 30px;
-    
-    .cta{
-        @include flex-align-center;
-        flex-direction: column;
-        margin: 0 50px;
-        text-align: center;
-        color: #ffffff;
-        
-        .title-2{
-            font-weight: 700;
-            font-size: 14px;
-            margin: 45px auto 28px;
-            @include media-breakpoint-up(lg){ font-size: 36px; }
-        }
-
-        p{
-            font-size: 16px;
-            font-weight: 400;
-            margin-bottom: 1rem;
-        }
-
-        button{
-            background-color: #ffffff;
-            color: $primary-color;
-            padding: 12px 28px;
-            border-radius: 5px;
-            text-transform: none;
-
-            @media (hover:hover){
-                &:hover{
-                    background-color: $primary-color;
-                    color: #ffffff;
-                }
-            }
-        }
-    }
+    color: #ffffff;
 
     .statistics{
         @include flex-justify-center;
@@ -44,7 +9,7 @@
         width: 100%;
         margin: 50px auto 0px;
         font-family: 'Montserrat', sans-serif;
-/*      box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);*/
+        //box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);
         @include media-breakpoint-up(md){
             display: grid;
             gap: unset;

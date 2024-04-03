@@ -1,7 +1,7 @@
 <section class="process">
     <div class="container">
         <div class="text">
-            <div class="title-line features d-flex flex-column align-items-center">
+            <div class="title-line">
                 <div class="title-5">Process</div>
                 <span class="line"></span>
             </div>

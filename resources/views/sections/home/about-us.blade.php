@@ -9,7 +9,7 @@
                     <div class="title-5">About Us</div>
                     <div class="line"></div>
                 </div>
-                <div class="title-2">We are Techpros, <br> Established <span>Since 1999</span></div>
+                <div class="title-2">We are Techpros,<br>Established <span>Since 1999</span></div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
