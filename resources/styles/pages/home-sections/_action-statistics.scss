@@ -1,54 +1,62 @@
 .action-statistics{
     background-color: $secondary-color;
-    padding-top: 30px;
+    padding-top: 50px;
     color: #ffffff;
 
     .statistics{
         @include flex-justify-center;
         flex-direction: column;
         width: 100%;
-        margin: 50px auto 0px;
         font-family: 'Montserrat', sans-serif;
-        //box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);
         @include media-breakpoint-up(md){
             display: grid;
-            gap: unset;
-            grid-template-columns: 45% 45%;
+            justify-content: center;
+            grid-template-columns: 50% 50%;
             column-gap: 0px;
-            @include set-mx(0);
             row-gap: 0px;
-            grid-template-rows: 50% 50%;
+            grid-template-rows: auto auto;
             box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.5);
         }
         @include media-breakpoint-up(lg){
             @include flex-row;
-            @include set-mx(auto);
             box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);
-            width: 80%;
         }
 
         .icon{
             @include flex-align-justify-center;
             @include make-circle(50px);
             font-size: larger;
-            margin-right: 10px;
+            margin-right: 1rem;
             background-color: $secondary-color;
             color: #ffffff;
         }
 
-        .stat-blue, .stat-purple, .stat-white{
-            @include flex-align-justify-center;
+        .stat-card{
+            @include flex-align-center;
             flex-direction: row;
             width: 100%;
             height: 150px;
+            justify-content: flex-start;
+            padding-left: 1rem;
+            border-bottom: 1px solid transparent;
+            @include media-breakpoint-up(lg){
+                justify-content: center;
+                padding-left: unset;
+                border-bottom: unset;
+            }
 
-            .stat-data {
+            .stat-data{
                 font-weight: bolder;
                 text-transform: uppercase;
 
-                .title-2{ font-size: xx-large; }
+                .title{ font-size: 30px; }
 
-                div{ font-size: small; }
+                .title-span{
+                    @include flex-align-center;
+                    flex-direction: row;
+
+                    span{ font-size: 30px; }
+                }
             }
         }
 
@@ -60,13 +68,13 @@
             .icon{ background-color: $primary-color; }
         }
 
-        .stat-blue{
-            background-color: $primary-color;
-        }
+        .stat-blue{ background-color: $primary-color; }
 
         .stat-white{
             color: #000000;
             background-color: #ffffff;
         }
+
+        #account-number{ border-bottom-color:#000000; }
     }
 }

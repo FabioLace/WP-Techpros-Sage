@@ -67,8 +67,8 @@ domReady(async () => {
     function animateCount(element, target, duration) {
         const start = 0;
         const increment = target / (duration / 16); // 16ms è il tempo approssimativo di un frame
-
         let current = start;
+
         const interval = setInterval(() => {
             current += increment;
             element.textContent = Math.floor(current);
@@ -80,28 +80,41 @@ domReady(async () => {
         }, 16);
     }
 
-    /* const statisticsElement = document.querySelector('.statistics');
+    const statisticsElement = document.querySelector('.statistics');
 
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                const happyCustomersElement = document.querySelector('#happy-customers h1');
-                animateCount(happyCustomersElement, 147, 1000);
+    try {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    const happyCustomersElement = document.querySelector('#happy-customers .title');
+                    if(happyCustomersElement){
+                        animateCount(happyCustomersElement, 147, 1000);
+                    }
 
-                const accountNumber = document.querySelector('#account-number h1');
-                animateCount(accountNumber, 1280, 1000);
+                    const accountNumber = document.querySelector('#account-number .title');
+                    if(accountNumber){
+                        animateCount(accountNumber, 1280, 1000);
+                    }
+    
+                    const finishedProjects = document.querySelector('#finished-projects .title');
+                    if(finishedProjects){
+                        animateCount(finishedProjects,10, 1000);
+                    }
 
-                const finishedProjects = document.querySelector('#finished-projects h1');
-                animateCount(finishedProjects,10, 1000);
+                    const winAwards = document.querySelector('#win-awards .title');
+                    if(winAwards){
+                        animateCount(winAwards,992,1000);
+                    }
 
-                const winAwards = document.querySelector('#win-awards h1');
-                animateCount(winAwards,992,1000);
-
-                observer.unobserve(statisticsElement);
-            }
+                    observer.unobserve(statisticsElement);
+                }
+            });
         });
-    });
-    observer.observe(statisticsElement); */
+        observer.observe(statisticsElement);
+    } catch (err) {
+        console.log(err);
+        return;
+    }
 
     //SWIPER (UPDATE)
     const swiper = new Swiper(".swiper", {

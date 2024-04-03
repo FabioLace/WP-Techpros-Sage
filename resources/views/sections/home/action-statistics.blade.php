@@ -13,48 +13,48 @@
             </div>
         </div>
         <div class="statistics">
-            <div id="happy-customers" class="stat-blue">
+            <div id="happy-customers" class="stat-card stat-blue">
                 <span class="icon">
                     <i class="fa-solid fa-layer-group"></i>
                 </span>
                 <div class="stat-data">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="title mr-1">0</div>
-                        <div class="title-3">+</div>
+                    <div class="title-span">
+                        <div class="title">0</div>
+                        <span>+</span>
                     </div>
                     <div>Happy Customers</div>
                 </div>
             </div>
-            <div id="account-number" class="stat-white">
+            <div id="account-number" class="stat-card stat-white">
                 <span class="icon">
                     <i class="fa-solid fa-layer-group"></i>
                 </span>
                 <div class="stat-data">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="title mr-1">0</div>
-                        <div class="title-3">+</div>
+                    <div class="title-span">
+                        <div class="title">0</div>
+                        <span>+</span>
                     </div>
                     <div>Account number</div>
                 </div>
             </div>
-            <div id="finished-projects" class="stat-purple">
+            <div id="finished-projects" class="stat-card stat-purple">
                 <span class="icon">
                     <i class="fa-solid fa-layer-group"></i>
                 </span>
                 <div class="stat-data">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="title mr-1">0</div>
-                        <div class="title-3">K</div>
+                    <div class="title-span">
+                        <div class="title">0</div>
+                        <span>K</span>
                     </div>
                     <div>Finished Projects</div>
                 </div>
             </div>
-            <div id="win-awards" class="stat-white">
+            <div id="win-awards" class="stat-card stat-white">
                 <span class="icon">
                     <i class="fa-solid fa-layer-group"></i>
                 </span>
                 <div class="stat-data">
-                    <div class="title mr-1">0</div>
+                    <div class="title">0</div>
                     <div>Win Awards</div>
                 </div>
             </div>
