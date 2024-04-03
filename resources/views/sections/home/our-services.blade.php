@@ -10,42 +10,39 @@
             </div>
         </div>
         <div class="services-cards">
-            {{-- DA CICLARE CON PHP --}}
             <div class="card">
                 <div class="title-2">Cyber Security</div>
-                <span class="icon-card">
+                <div class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-network-wired"></i>
-                </span>
+                </div>
                 <div>Trouble that bound ensue that equaly blame belongs to those through weakness.</div>
                 <a>Read more <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="card always-activated">
                 <div class="title-2">Web Development</div>
-                <span class="icon-card">
+                <div class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-laptop"></i>
-                </span>
+                </div>
                 <div>Trouble that bound ensue that equaly blame belongs to those through weakness.</div>
-                <a href="#">
-                    Read more <i class="fa-solid fa-arrow-right"></i>
-                </a>
+                <a href="#">Read more <i class="fa-solid fa-arrow-right"></i></a>
             </div>
             <div class="card">
                 <div class="title-2">Mobile Development</div>
-                <span class="icon-card">
+                <div class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-mobile-alt"></i>
-                </span>
+                </div>
                 <div>Trouble that bound ensue that equaly blame belongs to those through weakness.</div>
                 <a href="#">Read more <i class="fa-solid fa-arrow-right"></i></a>
             </div>        
             <div class="card">
                 <div class="title-2">IT Consultancy</div>
-                <span class="icon-card">
+                <div class="icon-card">
                     <span class="circle"></span>
                     <i class="fa-solid fa-briefcase"></i>
-                </span>
+                </div>
                 <div>Trouble that bound ensue that equaly blame belongs to those through weakness.</div>
                 <a>Read more <i class="fa-solid fa-arrow-right"></i></a>
             </div>

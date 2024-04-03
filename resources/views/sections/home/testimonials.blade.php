@@ -2,7 +2,7 @@
     <div class="text">
         <div class="title-line features d-flex flex-column align-items-center">
             <div class="title-5">Client Rewiews</div>
-            <div class="line features-line"></div>
+            <span class="line"></span>
         </div>
         <div class="title-3">What Say Our Customers</div>
     </div>

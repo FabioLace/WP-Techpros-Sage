@@ -11,9 +11,9 @@
 
         .title-line{
             @include flex-column;
-            margin-bottom: 13px;
+            margin-bottom: 1rem;
 
-            .line{ margin-left: 0; } 
+            .line{ margin-left: 0; }
         }
     }
 
@@ -23,7 +23,7 @@
 
         .row{ 
             flex-direction: column;
-            @include media-breakpoint-up(lg){ flex-direction: row; } //LOL       
+            @include media-breakpoint-up(lg){ flex-direction: row; } //LOL
         }
 
         .step{
