@@ -1,7 +1,9 @@
 <section class="about-us">
     <div class="container">
         <div class="row">
-            <img class="col collage" src="@asset('images/about1.png' )">
+            <div class="col">
+                <img class="collage" src="@asset('images/about1.png' )">
+            </div>
             <div class="col text">
                 <div class="title-line">
                     <div class="title-5">About Us</div>

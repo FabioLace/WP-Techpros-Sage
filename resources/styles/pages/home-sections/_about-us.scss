@@ -3,22 +3,14 @@
 
     .container{
         @include flex-column;
-        @include media-breakpoint-up(lg){
-            flex-direction: row;
+        @include media-breakpoint-up(lg){ flex-direction: row; }
 
-            /* .collage{
-                margin: auto 0;
-                width: 50%;
-                height: auto;
-            } */
-        }
+        .collage{ width: 100%; }
 
         .text{
             margin: 50px;
             @include media-breakpoint-up(lg){
                 margin: unset;
-                width: 40%;
-
                 .title-line{ flex-direction: row; }
             }
 
