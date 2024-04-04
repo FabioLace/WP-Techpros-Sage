@@ -1,7 +1,11 @@
 import domReady from '@roots/sage/client/dom-ready';
 import $ from 'jquery';
 import 'bootstrap';
+
 import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 /**
  * Application entrypoint
@@ -82,52 +86,43 @@ domReady(async () => {
 
     const statisticsElement = document.querySelector('.statistics');
 
-    try {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting){
-                    const happyCustomersElement = document.querySelector('#happy-customers .title');
-                    if(happyCustomersElement){
-                        animateCount(happyCustomersElement, 147, 1000);
-                    }
-
-                    const accountNumber = document.querySelector('#account-number .title');
-                    if(accountNumber){
-                        animateCount(accountNumber, 1280, 1000);
-                    }
-    
-                    const finishedProjects = document.querySelector('#finished-projects .title');
-                    if(finishedProjects){
-                        animateCount(finishedProjects,10, 1000);
-                    }
-
-                    const winAwards = document.querySelector('#win-awards .title');
-                    if(winAwards){
-                        animateCount(winAwards,992,1000);
-                    }
-
-                    observer.unobserve(statisticsElement);
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                const happyCustomersElement = document.querySelector('#happy-customers .title');
+                if(happyCustomersElement){
+                    animateCount(happyCustomersElement, 147, 1000);
                 }
-            });
-        });
-        observer.observe(statisticsElement);
-    } catch (err) {
-        console.log(err);
-        return;
-    }
 
-    //SWIPER (UPDATE)
+                const accountNumber = document.querySelector('#account-number .title');
+                if(accountNumber){
+                    animateCount(accountNumber, 1280, 1000);
+                }
+
+                const finishedProjects = document.querySelector('#finished-projects .title');
+                if(finishedProjects){
+                    animateCount(finishedProjects,10, 1000);
+                }
+
+                const winAwards = document.querySelector('#win-awards .title');
+                if(winAwards){
+                    animateCount(winAwards,992,1000);
+                }
+
+                observer.unobserve(statisticsElement);
+            }
+        });
+    });
+    observer.observe(statisticsElement);
+
     const swiper = new Swiper(".swiper", {
+        modules: [Navigation, Pagination],
         slidesPerView: 3,
         centeredSlides: true,
         spaceBetween: 10,
         loop: true,
-        styleMode: false,
         pagination: {
             el: '.swiper-pagination',
-        },
-        scrollbar: {
-            el: '.swiper-scrollbar',
         },
     });
 });

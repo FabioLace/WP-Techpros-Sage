@@ -64,22 +64,48 @@ collect(['setup', 'filters'])
         }
     });
 
-function sage_register_styles(){
-    $version = wp_get_theme()->get( 'Version' );
-    wp_enqueue_style('sage-bootstrap',"https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css",array(),'4.5.2','all');
-    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css', array(), '6.4.2', 'all');
-    wp_enqueue_style('animate-css', 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css', array(), '4.1.1', 'all');
-}
+////////////////////////////////////////////////////////////////////////////
 
-add_action('wp_enqueue_scripts', 'sage_register_styles');
+/*
+|--------------------------------------------------------------------------
+| Register Navigation Menus
+|--------------------------------------------------------------------------
+|
+| Register Header and Footer menus
+|
+*/
 
-add_theme_support('sage');
+register_nav_menu('header','Header');
+register_nav_menu('footer','Footer');
 
-/**
- * 
- * REMOVE GUTENBERG
- * 
- */
+/*
+|--------------------------------------------------------------------------
+| Load external libraries
+|--------------------------------------------------------------------------
+|
+| Registering other styles
+|
+*/
+
+add_action('wp_enqueue_scripts', function(){
+    echo '
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600,800,900" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:600,800,900" >
+    ';
+});
+
+/*
+|--------------------------------------------------------------------------
+| Remove Gutenberg
+|--------------------------------------------------------------------------
+|
+| I don't use Gutenberg because it has some limitation while using plugins
+| like Advanced Custom Fields. More control is better than less control.
+|
+*/
+
 add_filter( 'use_block_editor_for_post', '__return_false' );
 add_filter( 'use_widgets_block_editor', '__return_false' );
 
@@ -89,3 +115,42 @@ add_action( 'wp_enqueue_scripts', function() {
     wp_dequeue_style( 'global-styles' );
 }, 20 );
 
+/*
+|--------------------------------------------------------------------------
+| Load Favicons
+|--------------------------------------------------------------------------
+|
+| As the title says
+|
+*/
+
+/* add_action('wp_head', function(){
+    $faviconDirectory = get_template_directory_uri() . '/resources/images/favicon';
+    echo "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"".$faviconDirectory."/apple-touch-icon.png\">";
+    echo "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"".$faviconDirectory."/favicon-32x32.png\">";
+    echo "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"".$faviconDirectory."/favicon-16x16.png\">";
+    echo "<link rel=\"manifest\" href=\"".$faviconDirectory."/site.webmanifest\">";
+    echo "<link rel=\"mask-icon\" href=\"".$faviconDirectory."/safari-pinned-tab.svg\" color=\"#9d9d9c\">";
+    echo "<meta name=\"msapplication-TileColor\" content=\"#9d9d9c\">";
+    echo "<meta name=\"theme-color\" content=\"#ffffff\">";
+}); */
+
+/*
+|--------------------------------------------------------------------------
+| Customize Login Page
+|--------------------------------------------------------------------------
+|
+| As the title says, it customizes the default WP login page
+|
+*/
+
+/* add_action('login_head', 'add_favicon');
+add_filter( 'login_headerurl', function(){ return home_url(); });
+add_filter( 'login_headertext', function(){ return 'Meli Massaggi'; });
+add_filter('login_display_language_dropdown', '__return_false');
+
+add_action( 'login_enqueue_scripts', function(){
+    $pathToLogo = get_template_directory_uri() . '/resources/images/logo-min.png';
+    $pathToLeaves = get_template_directory_uri() . '/resources/images/leaves.jpeg';
+    echo '<style type="text/css"></style>';
+}); */
