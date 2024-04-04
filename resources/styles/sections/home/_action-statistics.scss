@@ -22,7 +22,7 @@
             box-shadow: 0px 30px 30px 0px rgba(0,0,0,0.75);
         }
 
-        .icon{
+        .span-icon{
             @include flex-align-justify-center;
             @include make-circle(50px);
             font-size: larger;

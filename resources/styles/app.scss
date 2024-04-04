@@ -23,7 +23,11 @@ body{
 
     a, a:hover{ text-decoration: none; }
 
-    section{ margin-bottom: 100px}
+    section{
+        margin-bottom: 100px;
+
+        &:last-of-type{ margin-bottom: 0; }
+    }
 
     .title-line{
         @include flex-align-center;

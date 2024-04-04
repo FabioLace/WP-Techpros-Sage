@@ -14,7 +14,7 @@
         </div>
         <div class="statistics">
             <div id="happy-customers" class="stat-card stat-blue">
-                <span class="icon">
+                <span class="span-icon">
                     <i class="fa-solid fa-layer-group"></i>
                 </span>
                 <div class="stat-data">
@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div id="account-number" class="stat-card stat-white">
-                <span class="icon">
+                <span class="span-icon">
                     <i class="fa-solid fa-layer-group"></i>
                 </span>
                 <div class="stat-data">
@@ -38,7 +38,7 @@
                 </div>
             </div>
             <div id="finished-projects" class="stat-card stat-purple">
-                <span class="icon">
+                <span class="span-icon">
                     <i class="fa-solid fa-layer-group"></i>
                 </span>
                 <div class="stat-data">
@@ -50,7 +50,7 @@
                 </div>
             </div>
             <div id="win-awards" class="stat-card stat-white">
-                <span class="icon">
+                <span class="span-icon">
                     <i class="fa-solid fa-layer-group"></i>
                 </span>
                 <div class="stat-data">

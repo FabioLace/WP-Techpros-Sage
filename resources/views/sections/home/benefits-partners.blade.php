@@ -14,7 +14,7 @@
                     <p>Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
                     <div class="paragraphs">
                         <div class="paragraph">
-                            <span class="icon">
+                            <span class="span-icon">
                                 <i class="fa-solid fa-layer-group"></i>
                             </span>
                             <div class="paragraph-text">
@@ -23,7 +23,7 @@
                             </div>
                         </div>
                         <div class="paragraph">
-                            <span class="icon">
+                            <span class="span-icon">
                                 <i class="fa-regular fa-handshake"></i>
                             </span>
                             <div class="paragraph-text">
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                         <div class="paragraph">
-                            <span class="icon">
+                            <span class="span-icon">
                                 <i class="fa-regular fa-handshake"></i>
                             </span>
                             <div class="paragraph-text">
@@ -63,6 +63,5 @@
             </div>
             <div class="swiper-pagination"></div>
         </div>
-    </div>
     </div>
 </section>

@@ -124,33 +124,11 @@ add_action( 'wp_enqueue_scripts', function() {
 |
 */
 
-/* add_action('wp_head', function(){
+add_action('wp_head', function(){
     $faviconDirectory = get_template_directory_uri() . '/resources/images/favicon';
     echo "<link rel=\"apple-touch-icon\" sizes=\"180x180\" href=\"".$faviconDirectory."/apple-touch-icon.png\">";
     echo "<link rel=\"icon\" type=\"image/png\" sizes=\"32x32\" href=\"".$faviconDirectory."/favicon-32x32.png\">";
     echo "<link rel=\"icon\" type=\"image/png\" sizes=\"16x16\" href=\"".$faviconDirectory."/favicon-16x16.png\">";
     echo "<link rel=\"manifest\" href=\"".$faviconDirectory."/site.webmanifest\">";
     echo "<link rel=\"mask-icon\" href=\"".$faviconDirectory."/safari-pinned-tab.svg\" color=\"#9d9d9c\">";
-    echo "<meta name=\"msapplication-TileColor\" content=\"#9d9d9c\">";
-    echo "<meta name=\"theme-color\" content=\"#ffffff\">";
-}); */
-
-/*
-|--------------------------------------------------------------------------
-| Customize Login Page
-|--------------------------------------------------------------------------
-|
-| As the title says, it customizes the default WP login page
-|
-*/
-
-/* add_action('login_head', 'add_favicon');
-add_filter( 'login_headerurl', function(){ return home_url(); });
-add_filter( 'login_headertext', function(){ return 'Meli Massaggi'; });
-add_filter('login_display_language_dropdown', '__return_false');
-
-add_action( 'login_enqueue_scripts', function(){
-    $pathToLogo = get_template_directory_uri() . '/resources/images/logo-min.png';
-    $pathToLeaves = get_template_directory_uri() . '/resources/images/leaves.jpeg';
-    echo '<style type="text/css"></style>';
-}); */
+});

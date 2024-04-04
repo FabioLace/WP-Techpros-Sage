@@ -2,8 +2,8 @@
     <div class="container">
         <div class="hero-content">
             <div class="text">
-                <div class="title-4" class="animate__animated animate__fadeInUp"> // Full Cycle IT Solution Services </div>
-                <h1 class="title" class="animate__animated animate__fadeInUp animate__delay-1s">End-To-End<br>Secure IT Service </h1>
+                <div class="title-4 animate__animated animate__fadeInUp"> // Full Cycle IT Solution Services </div>
+                <h1 class="title animate__animated animate__fadeInUp animate__delay-1s">End-To-End<br>Secure IT Service </h1>
                 <p class="animate__animated animate__fadeInUp animate__delay-1s">
                     Over the years, a wide range of developments and innovations in the
                     global IT arena have led to many new IT-enabled
