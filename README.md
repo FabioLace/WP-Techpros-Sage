@@ -6,49 +6,34 @@
         </a>
     </p>
     <p>
-        <img src="https://img.shields.io/badge/wordpress-grey?style=for-the-badge&logo=wordpress">
-        <img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white">
+        <img src="https://img.shields.io/badge/WordPress-%23117AC9.svg?style=for-the-badge&logo=WordPress&logoColor=white">
+        <img src="https://img.shields.io/badge/sage-525DDC?style=for-the-badge">
+        <img src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white">
+        <img src="https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white">
+        <img src="https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white](https://img.shields.io/badge/sage-525DDC?style=for-the-badge">
     </p>
 </div>
   
-Wordpress theme made with Sage 10 and based on the one provided by <a href="https://wp.ditsolution.net/techpros/">Template Monster</a>. The version made with vanilla CSS and PHP is available at <a href="https://github.com/FabioLace/techpros-theme">this link</a>.
+Wordpress theme made with Sage 10 and based on the one provided by <a href="https://wp.ditsolution.net/techpros/">Template Monster</a>.
 
-# Info
-* PHP ^8.0
-* Roots/acorn: ^3.2
-* Node.js >= 16.0.0
-  
-### DEV Dependencies
+## Dependencies
+* Bootstrap
+* Sass
+* jQuery
+* Fontawesome
+* Swiper
 
-```sh
-"@roots/bud": "^6.15.2",
-"@roots/bud-sass": "^6.15.2",
-"@roots/sage": "^6.15.2"
-```
-
-### External Libraries
-* <a href="https://animate.style/">Animate.css 4.1.1</a>
-* <a href="https://getbootstrap.com/">Bootstrap 4.5.2</a> 
-* <a href="https://fontawesome.com/">Fontawesome 6.4.2</a>
-* <a href="https://swiperjs.com/">Swiper.js</a>
-
-# Deploy
+## Guide
 * Download the repo in the "themes" folder of your Wordpress project.
 * Open themes/techpros-sage in your terminal and launch these commands:
+  
 ```sh
-composer require roots/acorn
 composer install
-yarn
-yarn build
-```
-
-* Even if Sage 10 docs recommends yarn,you can also use npm:
-```sh
 npm install
 npm run build
 ```
 
-* Activate the theme from CMS
+* Activate the theme.
 
-# See also
+## See also
 * <a href="https://roots.io/sage/docs/installation/">Sage Docs</a>
