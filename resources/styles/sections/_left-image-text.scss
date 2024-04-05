@@ -1,6 +1,6 @@
 .left-image-text{
-    .container{
-        @include flex-column;
+    .container .row{
+        flex-direction: column;
         @include media-breakpoint-up(lg){ flex-direction: row; }
 
         .left-image{ width: 100%; }

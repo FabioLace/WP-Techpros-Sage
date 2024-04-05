@@ -1,10 +1,7 @@
 @php
-    /* for($i = 0; $i <= 5; $i++){
-        echo '<a href="#">Home '. ($i + 1).'</a>';
-    } */
-    /* for($j = 0; $j < 3; $j ++){
-        echo '<a href="#">Contact Style '.($j +1) .'</a>';
-    } */
+    if(has_nav_menu('header')){
+        $headerItems = wp_get_nav_menu_items('header');
+    }
 @endphp
 
 <header>
@@ -43,70 +40,82 @@
                     <img id="logo" src="@asset('images/main-logo.png')">
                 </div>
                 <div class="col nav-links">
-                    <div class="nav-link">
-                        <a href="#">Home</a>
-                        <div class="dropdown">
-                            {{-- HOME --}}
-                            <a href="#">FAQ</a>
+                    @if(isset($headerItems) && !empty($headerItems))
+                        @foreach($headerItems as $headerItem)
+                            <div class="nav-link">
+                                <a href="{{ $headerItem->url }}">{{ $headerItem->post_title }}</a>
+                            </div>
+                        @endforeach
+                    @else
+                        <div class="nav-link">
+                            <a href="#">Home</a>
+                            <div class="dropdown">
+                                @for($i = 0; $i <= 5; $i++)
+                                    <a href="#">Home {{ $i + 1 }}</a>
+                                @endfor
+                                <a href="#">FAQ</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="nav-link">
-                        <a href="#">Company</a>
-                        <div class="dropdown">
-                            <a href="#">About Us Two</a>
-                            <a href="#">Why Choose Us</a>
-                            <a href="#">Team Member</a>
-                            <a href="#">Single Team</a>
-                            <a class="link-with-sub-menu" href="#">Portfolio</a>
-                                <div class="sub-menu">
-                                    <a href="#">Portfolio Two</a>
-                                    <a href="#">Portfolio Three</a>
-                                </div>
-                            <a class="link-with-sub-menu" href="#">Our Service</a>
-                                <div class="sub-menu">
-                                    <a href="#">Our Service Two</a>
-                                    <a href="#">Our Service Three</a>
-                                </div>
-                            <a href="#">Case study</a>
-                            <a href="#">Pricing plan</a>
-                            <a href="#">Faq</a>
+                        <div class="nav-link">
+                            <a href="#">Company</a>
+                            <div class="dropdown">
+                                <a href="#">About Us Two</a>
+                                <a href="#">Why Choose Us</a>
+                                <a href="#">Team Member</a>
+                                <a href="#">Single Team</a>
+                                <a class="link-with-sub-menu" href="#">Portfolio</a>
+                                    {{-- <div class="sub-menu">
+                                        <a href="#">Portfolio Two</a>
+                                        <a href="#">Portfolio Three</a>
+                                    </div> --}}
+                                <a class="link-with-sub-menu" href="#">Our Service</a>
+                                    {{-- <div class="sub-menu">
+                                        <a href="#">Our Service Two</a>
+                                        <a href="#">Our Service Three</a>
+                                    </div> --}}
+                                <a href="#">Case study</a>
+                                <a href="#">Pricing plan</a>
+                                <a href="#">Faq</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="nav-link">
-                        <a href="#">IT Solution</a>
-                        <div class="dropdown">
-                            <a href="#">IT Services</a>
-                            <a href="#">Managed IT Services</a>
-                            <a href="#">Industries</a>
-                            <a href="#">Business Solutions</a>
-                            <a href="#">IT Services Details</a>
+                        <div class="nav-link">
+                            <a href="#">IT Solution</a>
+                            <div class="dropdown">
+                                <a href="#">IT Services</a>
+                                <a href="#">Managed IT Services</a>
+                                <a href="#">Industries</a>
+                                <a href="#">Business Solutions</a>
+                                <a href="#">IT Services Details</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="nav-link">
-                        <a href="#">Elements</a>
-                        <div class="dropdown">
-                            <a href="#">Services</a>
-                            <a href="#">Info Box</a>
-                            <a href="#">Pricing Plan</a>
-                            <a href="#">Team</a>
-                            <a href="#">Countdown</a>
-                            <a href="#">Accordion</a>
+                        <div class="nav-link">
+                            <a href="#">Elements</a>
+                            <div class="dropdown">
+                                <a href="#">Services</a>
+                                <a href="#">Info Box</a>
+                                <a href="#">Pricing Plan</a>
+                                <a href="#">Team</a>
+                                <a href="#">Countdown</a>
+                                <a href="#">Accordion</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="nav-link">
-                        <a href="#">Blog</a>
-                        <div class="dropdown">
-                            <a href="#">Blog List</a>
-                            <a href="#">Blog Grid</a>
-                            <a href="#">Blog 2column</a>
+                        <div class="nav-link">
+                            <a href="#">Blog</a>
+                            <div class="dropdown">
+                                <a href="#">Blog List</a>
+                                <a href="#">Blog Grid</a>
+                                <a href="#">Blog 2column</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="nav-link">
-                        <a href="#">Contact</a>
-                        <div class="dropdown">
-                            {{--CONTACT --}}
+                        <div class="nav-link">
+                            <a href="#">Contact</a>
+                            <div class="dropdown">
+                                @for($i = 0; $i <= 5; $i++)
+                                    <a href="#">Contact {{ $i + 1 }}</a>
+                                @endfor
+                            </div>
                         </div>
-                    </div>
+                    @endif
                 </div>
                 <div class="col cta-button">
                     <button class="button button-blue">Get a quote</button>
@@ -124,83 +133,96 @@
                     </div>
                 </div>
             </div>
-            <div class="mobile-nav-links"> {{-- ANIMAZIONE --}}
+            <div class="mobile-nav-links">
                 <div class="container">
-                    <div class="mobile-nav-link">
-                        <a href="#">Home</a>
-                        <span class="mobile-dropdown-opener">+</span>
-                        <div class="mobile-dropdown">
-                            <a href="#">FAQ</a>
-                        </div>
-                    </div>
-                    <div class="mobile-nav-link">
-                        <a href="#">Company</a>
-                        <span class="mobile-dropdown-opener">+</span>
-                        <div class="mobile-dropdown">
-                            <a href="#">About Us Two</a>
-                            <a href="#">Why Choose Us</a>
-                            <a href="#">Team Member</a>
-                            <a href="#">Single Team</a>
-                            {{-- <div class="mobile-nav-link">
-                                <a href="#">Portfolio</a>
-                                <span class="mobile-dropdown-opener">+</span>
-                            </div>
-                            <div class="mobile-dropdown">
-                                <a href="#">Portfolio Two</a>
-                                <a href="#">Portfolio Three</a>
-                            </div>
+                    @if(isset($headerItems) && !empty($headerItems))
+                        @foreach($headerItems as $headerItem)
                             <div class="mobile-nav-link">
-                                <a href="#">Our Service</a>
-                                <span class="mobile-dropdown-opener">+</span>
+                                <a href="{{ $headerItem->url }}">{{ $headerItem->post_title }}</a>
                             </div>
+                        @endforeach
+                    @else
+                        <div class="mobile-nav-link">
+                            <a href="#">Home</a>
+                            <span class="mobile-dropdown-opener">+</span>
                             <div class="mobile-dropdown">
-                                <a href="#">Our Service Two</a>
-                                <a href="#">Our Service Three</a>
-                            </div> --}}
-                            <a href="#">Case study</a>
-                            <a href="#">Pricing plan</a>
-                            <a href="#">Faq</a>
+                                @for($i = 0; $i <= 5; $i++)
+                                    <a href="#">Home {{ $i + 1 }}</a>
+                                @endfor
+                                <a href="#">FAQ</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mobile-nav-link">
-                        <a href="#">IT Solution</a>
-                        <span class="mobile-dropdown-opener">+</span>
-                        <div class="mobile-dropdown">
-                            <a href="#">IT Services</a>
-                            <a href="#">Managed IT Services</a>
-                            <a href="#">Industries</a>
-                            <a href="#">Business Solutions</a>
-                            <a href="#">IT Services Details</a>
+                        <div class="mobile-nav-link">
+                            <a href="#">Company</a>
+                            <span class="mobile-dropdown-opener">+</span>
+                            <div class="mobile-dropdown">
+                                <a href="#">About Us Two</a>
+                                <a href="#">Why Choose Us</a>
+                                <a href="#">Team Member</a>
+                                <a href="#">Single Team</a>
+                                {{-- <div class="mobile-nav-link">
+                                    <a href="#">Portfolio</a>
+                                    <span class="mobile-dropdown-opener">+</span>
+                                </div>
+                                <div class="mobile-dropdown">
+                                    <a href="#">Portfolio Two</a>
+                                    <a href="#">Portfolio Three</a>
+                                </div>
+                                <div class="mobile-nav-link">
+                                    <a href="#">Our Service</a>
+                                    <span class="mobile-dropdown-opener">+</span>
+                                </div>
+                                <div class="mobile-dropdown">
+                                    <a href="#">Our Service Two</a>
+                                    <a href="#">Our Service Three</a>
+                                </div> --}}
+                                <a href="#">Case study</a>
+                                <a href="#">Pricing plan</a>
+                                <a href="#">Faq</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mobile-nav-link">
-                        <a href="#">Elements</a>
-                        <span class="mobile-dropdown-opener">+</span>
-                        <div class="mobile-dropdown">
-                            <a href="#">Services</a>
-                            <a href="#">Info Box</a>
-                            <a href="#">Pricing Plan</a>
-                            <a href="#">Team</a>
-                            <a href="#">Countdown</a>
-                            <a href="#">Accordion</a>
+                        <div class="mobile-nav-link">
+                            <a href="#">IT Solution</a>
+                            <span class="mobile-dropdown-opener">+</span>
+                            <div class="mobile-dropdown">
+                                <a href="#">IT Services</a>
+                                <a href="#">Managed IT Services</a>
+                                <a href="#">Industries</a>
+                                <a href="#">Business Solutions</a>
+                                <a href="#">IT Services Details</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mobile-nav-link">
-                        <a href="#">Blog</a>
-                        <span class="mobile-dropdown-opener">+</span>
-                        <div class="mobile-dropdown">
-                            <a href="#">Blog List</a>
-                            <a href="#">Blog Grid</a>
-                            <a href="#">Blog 2column</a>
+                        <div class="mobile-nav-link">
+                            <a href="#">Elements</a>
+                            <span class="mobile-dropdown-opener">+</span>
+                            <div class="mobile-dropdown">
+                                <a href="#">Services</a>
+                                <a href="#">Info Box</a>
+                                <a href="#">Pricing Plan</a>
+                                <a href="#">Team</a>
+                                <a href="#">Countdown</a>
+                                <a href="#">Accordion</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="mobile-nav-link">
-                        <a href="#">Contact</a>
-                        <span class="mobile-dropdown-opener">+</span>
-                        <div class="mobile-dropdown">
-                            {{-- CONTACT --}}
+                        <div class="mobile-nav-link">
+                            <a href="#">Blog</a>
+                            <span class="mobile-dropdown-opener">+</span>
+                            <div class="mobile-dropdown">
+                                <a href="#">Blog List</a>
+                                <a href="#">Blog Grid</a>
+                                <a href="#">Blog 2column</a>
+                            </div>
                         </div>
-                    </div>
+                        <div class="mobile-nav-link">
+                            <a href="#">Contact</a>
+                            <span class="mobile-dropdown-opener">+</span>
+                            <div class="mobile-dropdown">
+                                @for($i = 0; $i <= 5; $i++)
+                                    <a href="#">Contact {{ $i + 1 }}</a>
+                                @endfor
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>
