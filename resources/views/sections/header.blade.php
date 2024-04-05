@@ -2,6 +2,7 @@
     if(has_nav_menu('header')){
         $headerItems = wp_get_nav_menu_items('header');
     }
+    $hasHeaderMenu = isset($headerItems) && !empty($headerItems);
 @endphp
 
 <header>
@@ -40,11 +41,26 @@
                     <img id="logo" src="@asset('images/main-logo.png')">
                 </div>
                 <div class="col nav-links">
-                    @if(isset($headerItems) && !empty($headerItems))
-                        @foreach($headerItems as $headerItem)
-                            <div class="nav-link">
-                                <a href="{{ $headerItem->url }}">{{ $headerItem->post_title }}</a>
-                            </div>
+                    @if($hasHeaderMenu)
+                        @foreach($headerItems as $item)
+                            @if($item->menu_item_parent == 0)
+                                @php
+                                    $subMenuItems = array_filter($headerItems, function($headerItem) use ($item) {
+                                        return $headerItem->menu_item_parent == $item->ID;
+                                    });
+                                @endphp
+                                <div class="nav-link">
+                                    <a href="{{ $item->url }}">{{ $item->post_title }}</a>
+                                    @if(isset($subMenuItems) && !empty($subMenuItems))
+                                        <span class="angle-down"><i class="fa-solid fa-angle-down"></i></span>
+                                        <div class="dropdown">
+                                            @foreach($subMenuItems as $sub)
+                                                <a href="{{ $sub->url }}">{{ $sub->post_title }}</a>
+                                            @endforeach
+                                        </div>
+                                    @endif
+                                </div>
+                            @endif
                         @endforeach
                     @else
                         <div class="nav-link">
@@ -63,16 +79,16 @@
                                 <a href="#">Why Choose Us</a>
                                 <a href="#">Team Member</a>
                                 <a href="#">Single Team</a>
-                                <a class="link-with-sub-menu" href="#">Portfolio</a>
-                                    {{-- <div class="sub-menu">
+                                {{--<a class="link-with-sub-menu" href="#">Portfolio</a>
+                                     <div class="sub-menu">
                                         <a href="#">Portfolio Two</a>
                                         <a href="#">Portfolio Three</a>
-                                    </div> --}}
+                                    </div> 
                                 <a class="link-with-sub-menu" href="#">Our Service</a>
-                                    {{-- <div class="sub-menu">
+                                    <div class="sub-menu">
                                         <a href="#">Our Service Two</a>
                                         <a href="#">Our Service Three</a>
-                                    </div> --}}
+                                    </div>--}}
                                 <a href="#">Case study</a>
                                 <a href="#">Pricing plan</a>
                                 <a href="#">Faq</a>
@@ -135,11 +151,26 @@
             </div>
             <div class="mobile-nav-links">
                 <div class="container">
-                    @if(isset($headerItems) && !empty($headerItems))
-                        @foreach($headerItems as $headerItem)
-                            <div class="mobile-nav-link">
-                                <a href="{{ $headerItem->url }}">{{ $headerItem->post_title }}</a>
-                            </div>
+                    @if($hasHeaderMenu)
+                        @foreach($headerItems as $item)
+                            @if($item->menu_item_parent == 0)
+                                @php
+                                    $subMenuItems = array_filter($headerItems, function($headerItem) use ($item) {
+                                        return $headerItem->menu_item_parent == $item->ID;
+                                    });
+                                @endphp
+                                <div class="mobile-nav-link">
+                                    <a href="{{ $item->url }}">{{ $item->post_title }}</a>
+                                    @if(isset($subMenuItems) && !empty($subMenuItems))
+                                        <span class="mobile-dropdown-opener">+</span>
+                                        <div class="mobile-dropdown">
+                                            @foreach($subMenuItems as $sub)
+                                                <a href="{{ $sub->url }}">{{ $sub->post_title }}</a>
+                                            @endforeach
+                                        </div>
+                                    @endif
+                                </div>
+                            @endif
                         @endforeach
                     @else
                         <div class="mobile-nav-link">
