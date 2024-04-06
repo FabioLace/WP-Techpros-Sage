@@ -95,6 +95,7 @@ header{
                     font-size: 13px;
                     font-weight: bolder;
                     color: #000000;
+                    user-select: none;
                 }
 
                 .angle-down, .angle-right{
@@ -112,36 +113,37 @@ header{
                     background-color: #ffffff;
                     animation: fadeInUpDrop 0.3s ease-in-out;
 
-                    .sub-menu{
-                        display: none;
-                        position: absolute;
-                        z-index: 999;
-                        left: 117px;
-                        background-color: #ffffff;
-                    }
-
                     .menu-item, a{
                         color: #000000;
                         padding: 5px;
                         padding-right: 50px;
+                        width: 100%;
                         transition: 0.3s;
                         border-top: 1px solid #ffffff;
 
                         &:hover{
                             color: #ffffff;
                             background-color: $secondary-color;
-                            /* &::after{
-                                display: block;
-                                position: absolute;
-                                content: '';
-                                z-index: 999;
-                                width: 120px;
-                                height: 30px;
-                                left: 117px;
-                                top: 0
-                            } */
-                            & + .sub-menu{ @include flex-column; }
                         }
+                    }
+                }
+
+                &.has-sub-menu{
+                    position: relative;
+
+                    .sub-menu{
+                        display: none;
+                        position: absolute;
+                        z-index: 999;
+                        left: 100%;
+                        top: 0;
+                        background-color: #ffffff;
+                    }
+
+                    &:hover {
+                        .menu-item{ background-color: $secondary-color; }
+
+                        .sub-menu{ @include flex-column; }
                     }
                 }
             }

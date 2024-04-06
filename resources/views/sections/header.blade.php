@@ -3,6 +3,7 @@
         $headerItems = wp_get_nav_menu_items('header');
     }
     $hasHeaderMenu = isset($headerItems) && !empty($headerItems);
+    //$hasHeaderMenu = true;
 @endphp
 
 <header>
@@ -45,45 +46,35 @@
                         @foreach($headerItems as $item)
                             @if($item->menu_item_parent == 0)
                                 @php
-                                    $subMenuItems = array_filter($headerItems, function($headerItem) use ($item) {
+                                    $subMenuItems1 = array_filter($headerItems, function($headerItem) use ($item) {
                                         return $headerItem->menu_item_parent == $item->ID;
                                     });
                                 @endphp
                                 <div class="nav-link">
-                                    @if($item->url !== "#")
-                                        <a href="{{ $item->url }}">{{ $item->post_title }}</a>
-                                    @else
-                                        <div class="menu-item">{{ $item->post_title }}</div>
-                                    @endif
-                                    @if(isset($subMenuItems) && !empty($subMenuItems))
+                                    {!! $item->url !== "#" ? '<a href="' . $item->url . '">' . $item->post_title . '</a>' : '<div class="menu-item">' . $item->post_title . '</div>' !!}
+                                    @if($subMenuItems1)
                                         <span class="angle-down"><i class="fa-solid fa-angle-down"></i></span>
                                         <div class="dropdown">
-                                            {{-- FIX HERE --}}
-                                            @foreach($subMenuItems as $sub)
+                                            @foreach($subMenuItems1 as $subMenuItem1)
                                                 @php
-                                                    $subSubMenuItems = [];
-                                                    foreach ($headerItems as $subSub) {
-                                                        if ($subSub->menu_item_parent == $sub->ID) {
-                                                            $subSubMenuItems[] = $subSub;
-                                                        }
-                                                    }
+                                                    $subMenuItems2 = array_filter($headerItems, function($headerItem) use ($subMenuItem1) {
+                                                        return $headerItem->menu_item_parent == $subMenuItem1->ID;
+                                                    });
                                                 @endphp
-                                                {{-- OMG --}}
-                                                <a href="{{ $sub->url }}">
-                                                    {{ $sub->post_title }}
-                                                    @if(count($subSubMenuItems) > 0)
+                                                @if(!empty($subMenuItems2))
+                                                    <div class="nav-link has-sub-menu">
+                                                        <div class="menu-item"> {{ $subMenuItem1->post_title }}</div>
                                                         <span class="angle-right"><i class="fa-solid fa-angle-right"></i></span>
-                                                        </a>
                                                         <div class="sub-menu">
-                                                            @foreach($subSubMenuItems as $subSubItem)
-                                                                <a href="{{ $subSubItem->url }}">{{ $subSubItem->post_title }}</a>
+                                                            @foreach($subMenuItems2 as $subMenuItem2)
+                                                                <a href="{{ $subMenuItem2->url }}">{{ $subMenuItem2->post_title }}</a>
                                                             @endforeach
                                                         </div>
-                                                    @else
-                                                        </a>
-                                                    @endif
+                                                    </div>
+                                                @else
+                                                    <a href="{{ $subMenuItem1->url }}">{{ $subMenuItem1->post_title }}</a>
+                                                @endif
                                             @endforeach
-
                                         </div>
                                     @endif
                                 </div>
@@ -91,38 +82,36 @@
                         @endforeach
                     @else
                         <div class="nav-link">
-                            <a href="#">Home</a>
+                            <div class="menu-item">Home</div>
+                            <span class="angle-down"><i class="fa-solid fa-angle-down"></i></span>
                             <div class="dropdown">
-                                @for($i = 0; $i <= 5; $i++)
-                                    <a href="#">Home {{ $i + 1 }}</a>
+                                @for($i = 0; $i <= 4; $i++)
+                                    <a href="#">Link {{ $i + 1 }}</a>
                                 @endfor
-                                <a href="#">FAQ</a>
                             </div>
                         </div>
                         <div class="nav-link">
-                            <a href="#">Company</a>
+                            <div class="menu-item">Company</div>
+                            <span class="angle-down"><i class="fa-solid fa-angle-down"></i></span>
                             <div class="dropdown">
-                                <a href="#">About Us Two</a>
+                                <a href="#">About Us</a>
                                 <a href="#">Why Choose Us</a>
-                                <a href="#">Team Member</a>
-                                <a href="#">Single Team</a>
-                                {{--<a class="link-with-sub-menu" href="#">Portfolio</a>
+                                <div class="nav-link has-sub-menu">
+                                    <div class="menu-item">
+                                        Portfolio
+                                        <span class="angle-right"><i class="fa-solid fa-angle-right"></i></span>
+                                    </div>
                                      <div class="sub-menu">
                                         <a href="#">Portfolio Two</a>
                                         <a href="#">Portfolio Three</a>
                                     </div> 
-                                <a class="link-with-sub-menu" href="#">Our Service</a>
-                                    <div class="sub-menu">
-                                        <a href="#">Our Service Two</a>
-                                        <a href="#">Our Service Three</a>
-                                    </div>--}}
-                                <a href="#">Case study</a>
-                                <a href="#">Pricing plan</a>
-                                <a href="#">Faq</a>
+                                </div>
+                                <a href="#">Team Member</a>
+                                <a href="#">Single Team</a>
                             </div>
                         </div>
                         <div class="nav-link">
-                            <a href="#">IT Solution</a>
+                            <div class="menu-item">IT Solution</div>
                             <div class="dropdown">
                                 <a href="#">IT Services</a>
                                 <a href="#">Managed IT Services</a>
@@ -132,7 +121,7 @@
                             </div>
                         </div>
                         <div class="nav-link">
-                            <a href="#">Elements</a>
+                            <div class="menu-item">Elements</div>
                             <div class="dropdown">
                                 <a href="#">Services</a>
                                 <a href="#">Info Box</a>
@@ -140,22 +129,6 @@
                                 <a href="#">Team</a>
                                 <a href="#">Countdown</a>
                                 <a href="#">Accordion</a>
-                            </div>
-                        </div>
-                        <div class="nav-link">
-                            <a href="#">Blog</a>
-                            <div class="dropdown">
-                                <a href="#">Blog List</a>
-                                <a href="#">Blog Grid</a>
-                                <a href="#">Blog 2column</a>
-                            </div>
-                        </div>
-                        <div class="nav-link">
-                            <a href="#">Contact</a>
-                            <div class="dropdown">
-                                @for($i = 0; $i <= 5; $i++)
-                                    <a href="#">Contact {{ $i + 1 }}</a>
-                                @endfor
                             </div>
                         </div>
                     @endif
@@ -179,7 +152,7 @@
             <div class="mobile-nav-links">
                 <div class="container">
                     @if($hasHeaderMenu)
-                        @foreach($headerItems as $item)
+                        {{-- @foreach($headerItems as $item)
                             @if($item->menu_item_parent == 0)
                                 @php
                                     $subMenuItems = array_filter($headerItems, function($headerItem) use ($item) {
@@ -198,7 +171,7 @@
                                     @endif
                                 </div>
                             @endif
-                        @endforeach
+                        @endforeach --}}
                     @else
                         <div class="mobile-nav-link">
                             <a href="#">Home</a>
