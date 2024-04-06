@@ -50,13 +50,40 @@
                                     });
                                 @endphp
                                 <div class="nav-link">
-                                    <a href="{{ $item->url }}">{{ $item->post_title }}</a>
+                                    @if($item->url !== "#")
+                                        <a href="{{ $item->url }}">{{ $item->post_title }}</a>
+                                    @else
+                                        <div class="menu-item">{{ $item->post_title }}</div>
+                                    @endif
                                     @if(isset($subMenuItems) && !empty($subMenuItems))
                                         <span class="angle-down"><i class="fa-solid fa-angle-down"></i></span>
                                         <div class="dropdown">
+                                            {{-- FIX HERE --}}
                                             @foreach($subMenuItems as $sub)
-                                                <a href="{{ $sub->url }}">{{ $sub->post_title }}</a>
+                                                @php
+                                                    $subSubMenuItems = [];
+                                                    foreach ($headerItems as $subSub) {
+                                                        if ($subSub->menu_item_parent == $sub->ID) {
+                                                            $subSubMenuItems[] = $subSub;
+                                                        }
+                                                    }
+                                                @endphp
+                                                {{-- OMG --}}
+                                                <a href="{{ $sub->url }}">
+                                                    {{ $sub->post_title }}
+                                                    @if(count($subSubMenuItems) > 0)
+                                                        <span class="angle-right"><i class="fa-solid fa-angle-right"></i></span>
+                                                        </a>
+                                                        <div class="sub-menu">
+                                                            @foreach($subSubMenuItems as $subSubItem)
+                                                                <a href="{{ $subSubItem->url }}">{{ $subSubItem->post_title }}</a>
+                                                            @endforeach
+                                                        </div>
+                                                    @else
+                                                        </a>
+                                                    @endif
                                             @endforeach
+
                                         </div>
                                     @endif
                                 </div>
