@@ -57,8 +57,8 @@ domReady(async () => {
 
     //HAMBURGER
     $('#hamburger').on('click',() =>{
-        $('#hamburger').toggleClass('hamburger-is-open');
-        $('.mobile-nav-links').toggleClass('mobile-nav-links-is-open');
+        $('#hamburger').toggleClass('open');
+        $('.mobile-nav-links').toggleClass('open');
     });
 
     //DROPDOWN

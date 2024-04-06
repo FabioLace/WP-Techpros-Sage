@@ -139,10 +139,10 @@
             </div>
         </div>
         <div class="mobile-menu">
-            <div class="techpros-hamburger">
+            <div class="title-hamburger">
                 <div class="container">
                     <div>TechPros</div>
-                    <div id="hamburger">
+                    <div id="hamburger" class="hamburger">
                         <div class="line line-1"></div>
                         <div class="line line-2"></div>
                         <div class="line line-3"></div>
@@ -152,26 +152,45 @@
             <div class="mobile-nav-links">
                 <div class="container">
                     @if($hasHeaderMenu)
-                        {{-- @foreach($headerItems as $item)
+                        @foreach($headerItems as $item)
                             @if($item->menu_item_parent == 0)
                                 @php
-                                    $subMenuItems = array_filter($headerItems, function($headerItem) use ($item) {
+                                    $subMenuItems1 = array_filter($headerItems, function($headerItem) use ($item) {
                                         return $headerItem->menu_item_parent == $item->ID;
                                     });
                                 @endphp
                                 <div class="mobile-nav-link">
-                                    <a href="{{ $item->url }}">{{ $item->post_title }}</a>
-                                    @if(isset($subMenuItems) && !empty($subMenuItems))
-                                        <span class="mobile-dropdown-opener">+</span>
+                                    {!! $item->url !== "#" ? '<a href="' . $item->url . '">' . $item->post_title . '</a>' : '<div class="menu-item">' . $item->post_title . '</div>' !!}
+                                    @if(!empty($subMenuItems1))
+                                        <span class="angle-down"><i class="fa-solid fa-angle-down"></i></span>
                                         <div class="mobile-dropdown">
-                                            @foreach($subMenuItems as $sub)
-                                                <a href="{{ $sub->url }}">{{ $sub->post_title }}</a>
+                                            @foreach($subMenuItems1 as $subMenuItem1)
+                                                {{-- @php
+                                                    $subMenuItems2 = array_filter($headerItems, function($headerItem) use ($subMenuItem1) {
+                                                        return $headerItem->menu_item_parent == $subMenuItem1->ID;
+                                                    });
+                                                @endphp
+                                                @if(!empty($subMenuItems2))
+                                                    <div class="mobilre-nav-link has-sub-menu">
+                                                        <div class="menu-item">
+                                                            {{ $subMenuItem1->post_title }}
+                                                            <span class="angle-right"><i class="fa-solid fa-angle-right"></i></span>
+                                                        </div>
+                                                        <div class="mobile-sub-menu">
+                                                            @foreach($subMenuItems2 as $subMenuItem2)
+                                                                <a href="{{ $subMenuItem2->url }}">{{ $subMenuItem2->post_title }}</a>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                @else --}}
+                                                    <a href="{{ $subMenuItem1->url }}">{{ $subMenuItem1->post_title }}</a>
+                                                {{-- @endif --}}
                                             @endforeach
                                         </div>
                                     @endif
                                 </div>
                             @endif
-                        @endforeach --}}
+                        @endforeach
                     @else
                         <div class="mobile-nav-link">
                             <a href="#">Home</a>
