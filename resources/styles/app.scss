@@ -24,9 +24,10 @@ body{
     a, a:hover{ text-decoration: none; }
 
     section{
-        margin-bottom: 100px;
-
+        margin-bottom: 20px;
+        @include media-breakpoint-up(lg){ margin-bottom: 100px; }
         &:last-of-type{ margin-bottom: 0; }
+
     }
 
     .title-line{
@@ -45,8 +46,13 @@ body{
     }
 
     .text-button{
-        align-items: center;
+        flex-direction: column;
+        text-align: center;
         margin-bottom: 50px;
+        @include media-breakpoint-up(lg){
+            flex-direction: row;
+            text-align: initial;
+        }
 
         .text{
             margin: unset;
@@ -66,8 +72,11 @@ body{
         }
 
         .view-services{
-            display: flex;
-            justify-content: flex-end;
+            //justify-content: center;
+            @include media-breakpoint-up(lg){
+                display: flex;
+                justify-content: flex-end;
+            }
 
             button{
                 @include make-square(fit-content);
@@ -78,6 +87,7 @@ body{
                 border: 2px solid transparent;
                 padding: 10px 15px;
                 transition: .3s;
+                font-family: 'Montserrat', sans-serif;
                 @media (hover:hover){
                     &:hover{
                         color: $primary-color;

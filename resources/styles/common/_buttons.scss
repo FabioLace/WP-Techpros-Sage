@@ -2,17 +2,29 @@
     border: none;
     outline: none;
     padding: 9px 29px;
-    background: $primary-color;
     text-transform: uppercase;
     cursor: pointer;
     color: #ffffff;
     transition: 0.5s;
 
-    &:hover{ background: $secondary-color; }
-
     &.button-blue{
         background: $primary-color;
-        &:hover{ background: $secondary-color; }
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            background: $secondary-color;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 100%;
+            z-index: -1;
+            transition: top 0.3s ease-in;
+        }
+
+        &:hover::before{ top: 0; }
     }
 
     &.button-purple{

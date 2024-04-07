@@ -6,7 +6,7 @@
         .left-image{ width: 100%; }
 
         .text{
-            margin: 50px;
+            margin-top: 50px;
             @include media-breakpoint-up(lg){
                 margin: unset;
                 .title-line{ flex-direction: row; }
