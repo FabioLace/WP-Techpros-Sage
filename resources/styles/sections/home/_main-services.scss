@@ -87,7 +87,7 @@
                 }
 
                 &::after{
-                    background: rgba(67,186,255,0.90);
+                    background: $primary-color;
                     @include service-before-after;
                 }
 
@@ -104,7 +104,7 @@
 
                 &::after{
                     @include service-before-after;
-                    background: rgba(67,186,255,0.90);
+                    background: $primary-color;
                 }
 
                 &:hover{
@@ -120,7 +120,7 @@
 
                 &::after{
                     @include service-before-after;
-                    background: rgba(67,186,255,0.90);
+                    background: $primary-color;
                 }
 
                 &:hover{

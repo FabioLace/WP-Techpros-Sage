@@ -47,7 +47,7 @@
 
             .button-purple{
                 display: none;
-                @include media-breakpoint-up(md){ display: block; } 
+                @include media-breakpoint-up(md){ display: block; }
             }
         }
     }

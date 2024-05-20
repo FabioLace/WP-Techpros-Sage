@@ -37,7 +37,7 @@ header{
         @include flex-align-justify-center;
         flex-direction: column;
         background-color: #ffffff;
-        color: #000000;
+        color: $ux-black;;
         text-transform: uppercase;
         transition: .3s;
         @include media-breakpoint-up(lg){
@@ -94,7 +94,7 @@ header{
                 .menu-item, a{
                     font-size: 13px;
                     font-weight: bolder;
-                    color: #000000;
+                    color: $ux-black;;
                     user-select: none;
                 }
 
@@ -109,12 +109,11 @@ header{
                     animation: fadeInUpDrop 0.3s ease-in-out;
 
                     .menu-item, a{
-                        color: #000000;
+                        color: $ux-black;;
                         padding: 5px;
                         padding-right: 50px;
                         width: 100%;
                         transition: 0.3s;
-                        //border-top: 1px solid #ffffff;
 
                         &:hover{
                             color: #ffffff;
@@ -153,11 +152,11 @@ header{
 
         &.nav-scroll{
             color: #ffffff;
-            @include media-breakpoint-up(lg){ background-color: #000000; }
+            @include media-breakpoint-up(lg){ background-color: $ux-black;; }
 
             .nav-link a, .nav-link a:hover{ color: #ffffff;}
 
-            .dropdown a{ color: #000000; }
+            .dropdown a{ color: $ux-black;; }
         }
 
         .mobile-menu{
@@ -198,7 +197,9 @@ header{
 
                         &.open{
                             .line-1{ transform: translate(0, 10px) rotate(45deg); }
+
                             .line-2{ opacity: 0; }
+
                             .line-3{ transform: translate(0, -5px) rotate(-45deg); }
                         }
                     }
@@ -209,7 +210,7 @@ header{
                 display: none;
                 flex-direction: column;
                 background-color: #F8F8F8;
-                color: black;
+                color: #000000;
                 text-transform: capitalize;
                 width: 100%;
                 height: max-content;
@@ -221,7 +222,6 @@ header{
 
                 .menu-item, a{
                     @include flex-align-center;
-                    //border-top: 1px solid #ddd;
                     padding: 1em 0;
                     transition: 0.3s;
                 }
@@ -238,7 +238,7 @@ header{
                     .mobile-dropdown-open{ color:#000000; }
     
                     & > a, .mobile-dropdown>a{
-                        color: #000000;
+                        color: $ux-black;;
                         display: block;
                         font-size: 14px;
                         text-transform: uppercase;
@@ -254,7 +254,7 @@ header{
 
                         &.open{
                             background-color: $secondary-color;
-                            color: white;
+                            color: #ffffff;
 
                             & > .mobile-sub-menu{
                                 display: flex;

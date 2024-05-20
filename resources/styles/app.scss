@@ -26,8 +26,8 @@ body{
     section{
         margin-bottom: 20px;
         @include media-breakpoint-up(lg){ margin-bottom: 100px; }
-        &:last-of-type{ margin-bottom: 0; }
 
+        &:last-of-type{ margin-bottom: 0; }
     }
 
     .title-line{
@@ -58,21 +58,15 @@ body{
             margin: unset;
             @include media-breakpoint-up(md){ margin-right: auto; }
 
-            .title-5{
-                font-size: 16px;
-                text-transform: uppercase;
-            }
+            .title-5{ text-transform: uppercase; }
 
             .title-3{
-                font-weight: 700;
                 text-transform: capitalize;
-                font-size: 20px;
                 margin-bottom: 10px;
             }
         }
 
         .view-services{
-            //justify-content: center;
             @include media-breakpoint-up(lg){
                 display: flex;
                 justify-content: flex-end;
